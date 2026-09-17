@@ -3,3 +3,5 @@ __pycache__/
 *.pyc
 runs/
 *.egg-info/
+evals/desktop/snapshots/
+evals/desktop/results/

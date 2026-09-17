@@ -13,7 +13,7 @@ def verify(expect):
     return {
         "landed": Noul(
             instructions=f"Compare `before` and `after`. Did this expected outcome happen: {expect!r}? "
-                         "Judge from the `added`, `removed` and `after` lines only.",
+                         "Judge from the `added`, `removed` and `after` lines and the window titles only.",
             criteria={"true": "The added or after lines show the expected outcome.",
                       "false": "The expected outcome is absent, or the screen is unchanged."}),
         "unchanged": Noul(

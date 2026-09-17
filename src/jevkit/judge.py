@@ -39,10 +39,15 @@ class Judge:
 
     # -- verify ---------------------------------------------------------------
 
-    def verify(self, expect, before, after, meta=None):
-        """before/after: candidate lists from jevkit.compact. Returns
+    def verify(self, expect, before, after, meta=None, before_meta=None):
+        """before/after: candidate lists from jevkit.compact; meta/before_meta:
+        snapshot metadata (window_title is used). Returns
         {landed, p_landed, unchanged, dialog, error, auth, gate, diff, note}."""
         d = compact.diff(before, after)
+        t_before = (before_meta or {}).get("window_title")
+        t_after = (meta or {}).get("window_title")
+        if t_before != t_after and (t_before or t_after):
+            d["title_before"], d["title_after"], d["changed"] = t_before, t_after, True
         note = compact.truncated_note(meta or {})
         if not d["changed"] and not note:
             # Nothing moved. Do not spend a call; the answer is deterministic.
@@ -51,6 +56,9 @@ class Judge:
                     "unavailable": False}
         state = {"expect": expect, "added": d["added"][:120], "removed": d["removed"][:120],
                  "after": compact.lines(after)[:config.MAX_STATE_LINES]}
+        if "title_after" in d:
+            state["before"] = {"window_title": t_before}
+            state["after_window_title"] = t_after
         ans, err = self._ask(state, questions.verify(expect), "verify")
         if ans is None:
             return {"landed": None, "gate": "caution", "diff": d, "note": note, "unavailable": True, "error_text": err}

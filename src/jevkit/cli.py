@@ -12,8 +12,10 @@ unavailable (the JSON says so); non-zero only for bad arguments.
 """
 import argparse
 import json
+import shutil
 import sys
 import time
+from pathlib import Path
 
 from . import __version__, compact, config, keys
 from .judge import Judge
@@ -111,6 +113,17 @@ def cmd_phone_verify(a):
     _out(Judge().verify(a.expect, before, _phone(a)))
 
 
+def cmd_shim(a):
+    from . import shim as sh
+    me = str((Path(__file__).resolve().parent.parent.parent / "shim" / "cua-driver"))
+    link = Path.home() / ".local" / "shims" / "cua-driver"
+    resolved = shutil.which("cua-driver")
+    _out({"shim_script": me, "link": str(link), "link_exists": link.exists(),
+          "path_resolves_to": resolved, "shim_active": bool(resolved and "jevkit" in str(Path(resolved).resolve())),
+          "real_driver": sh.real_binary(), "mode": sh.MODE, "classify_on_snapshot": sh.CLASSIFY,
+          "install": f"mkdir -p {link.parent} && ln -sf {me} {link} && add 'export PATH=\"$HOME/.local/shims:$PATH\"' as the LAST PATH line of ~/.zshrc"})
+
+
 def main(argv=None):
     p = argparse.ArgumentParser(prog="jev", description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     sub = p.add_subparsers(dest="cmd", required=True)
@@ -137,6 +150,8 @@ def main(argv=None):
     pk.set_defaults(fn=cmd_phone_pick)
     pv = sub.add_parser("phone-verify"); pv.add_argument("--boxes", required=True); pv.add_argument("--before", required=True)
     pv.add_argument("--expect", required=True); pv.set_defaults(fn=cmd_phone_verify)
+
+    sh = sub.add_parser("shim", help="where the cua-driver shim is and whether PATH resolves to it"); sh.set_defaults(fn=cmd_shim)
 
     a = p.parse_args(argv)
     try:

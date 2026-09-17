@@ -148,3 +148,12 @@ def test_log_has_no_state_text(phone_boxes, tmp_path):
     assert len(lines) == 1
     rec = json.loads(lines[0])
     assert rec["tag"] == "pick" and "state_sha" in rec and "Privacy" not in lines[0]
+
+
+def test_verify_title_change_counts(phone_boxes):
+    s = Scripted({"landed": noul(0.9), "unchanged": noul(0.1), "dialog": noul(0.1),
+                  "error": noul(0.1), "auth": noul(0.1)})
+    a = compact.phone_boxes(phone_boxes)
+    r = Judge(s).verify("Recents is open", a, a, {"window_title": "Recents"}, {"window_title": "Documents"})
+    assert r["landed"] and r["diff"]["title_after"] == "Recents"
+    assert s.calls[0][1]["after_window_title"] == "Recents"
