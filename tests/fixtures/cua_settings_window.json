@@ -1,0 +1,3552 @@
+{
+  "_note": "Prefer `elements` — `tree_markdown` will continue to work but new fields will only be added to the structured side. Issue #22865: use `max_elements` / `max_depth` to bound the AX walk on apps with very large trees.",
+  "app_name": "System Settings",
+  "background_input": {
+    "exact_window": {
+      "pid": 7466,
+      "status": "matched",
+      "window_id": 482
+    },
+    "observation": {
+      "frame_freshness": "unknown",
+      "one_shot_capture": "unavailable"
+    },
+    "routes": [
+      {
+        "route": "accessibility",
+        "status": "available"
+      },
+      {
+        "route": "window_pointer",
+        "status": "available"
+      },
+      {
+        "route": "pid_keyboard",
+        "status": "available"
+      }
+    ]
+  },
+  "element_count": 216,
+  "elements": [
+    {
+      "actions": [
+        "AXRaise"
+      ],
+      "depth": 0,
+      "element_index": 0,
+      "element_token": "s00000044:0",
+      "frame": {
+        "h": 962.0,
+        "w": 740.0,
+        "x": 1075.0,
+        "y": 30.0
+      },
+      "label": "Screen & System Audio Recording",
+      "role": "AXWindow"
+    },
+    {
+      "actions": [
+        "AXShowMenu"
+      ],
+      "depth": 2,
+      "element_index": 1,
+      "element_token": "s00000044:1",
+      "enabled": true,
+      "frame": {
+        "h": 864.0,
+        "w": 232.0,
+        "x": 1075.0,
+        "y": 128.0
+      },
+      "label": "Sidebar",
+      "parent_index": 0,
+      "role": "AXOutline"
+    },
+    {
+      "actions": [
+        "AXShowDefaultUI",
+        "AXShowAlternateUI"
+      ],
+      "depth": 3,
+      "element_index": 2,
+      "element_token": "s00000044:2",
+      "parent_index": 1,
+      "role": "AXRow",
+      "selected": false
+    },
+    {
+      "actions": [
+        "AXShowDefaultUI",
+        "AXShowAlternateUI"
+      ],
+      "depth": 3,
+      "element_index": 3,
+      "element_token": "s00000044:3",
+      "frame": {
+        "h": 46.0,
+        "w": 232.0,
+        "x": 1075.0,
+        "y": -40.0
+      },
+      "parent_index": 1,
+      "role": "AXRow",
+      "selected": false
+    },
+    {
+      "actions": [
+        "AXPress"
+      ],
+      "depth": 5,
+      "element_index": 4,
+      "element_token": "s00000044:4",
+      "enabled": true,
+      "label": "Alexandru Bejan, Apple Account",
+      "parent_index": 3,
+      "role": "AXButton"
+    },
+    {
+      "actions": [
+        "AXShowDefaultUI",
+        "AXShowAlternateUI"
+      ],
+      "depth": 3,
+      "element_index": 5,
+      "element_token": "s00000044:5",
+      "frame": {
+        "h": 32.0,
+        "w": 232.0,
+        "x": 1075.0,
+        "y": 6.0
+      },
+      "parent_index": 1,
+      "role": "AXRow",
+      "selected": false
+    },
+    {
+      "actions": [
+        "AXPress"
+      ],
+      "depth": 5,
+      "element_index": 6,
+      "element_token": "s00000044:6",
+      "enabled": true,
+      "frame": {
+        "h": 24.0,
+        "w": 68.0,
+        "x": 1092.0,
+        "y": 10.0
+      },
+      "label": "Family",
+      "parent_index": 5,
+      "role": "AXButton"
+    },
+    {
+      "actions": [
+        "AXShowDefaultUI",
+        "AXShowAlternateUI"
+      ],
+      "depth": 3,
+      "element_index": 7,
+      "element_token": "s00000044:7",
+      "parent_index": 1,
+      "role": "AXRow",
+      "selected": false
+    },
+    {
+      "actions": [
+        "AXShowDefaultUI",
+        "AXShowAlternateUI"
+      ],
+      "depth": 3,
+      "element_index": 8,
+      "element_token": "s00000044:8",
+      "frame": {
+        "h": 32.0,
+        "w": 232.0,
+        "x": 1075.0,
+        "y": 51.0
+      },
+      "parent_index": 1,
+      "role": "AXRow",
+      "selected": false
+    },
+    {
+      "actions": [
+        "AXPress"
+      ],
+      "depth": 5,
+      "element_index": 9,
+      "element_token": "s00000044:9",
+      "enabled": true,
+      "frame": {
+        "h": 17.0,
+        "w": 200.0,
+        "x": 1091.0,
+        "y": 58.5
+      },
+      "label": "Software Update Available",
+      "parent_index": 8,
+      "role": "AXButton",
+      "value": "1"
+    },
+    {
+      "actions": [
+        "AXShowDefaultUI",
+        "AXShowAlternateUI"
+      ],
+      "depth": 3,
+      "element_index": 10,
+      "element_token": "s00000044:10",
+      "parent_index": 1,
+      "role": "AXRow",
+      "selected": false
+    },
+    {
+      "actions": [
+        "AXShowDefaultUI",
+        "AXShowAlternateUI"
+      ],
+      "depth": 3,
+      "element_index": 11,
+      "element_token": "s00000044:11",
+      "frame": {
+        "h": 32.0,
+        "w": 232.0,
+        "x": 1075.0,
+        "y": 96.0
+      },
+      "parent_index": 1,
+      "role": "AXRow",
+      "selected": false
+    },
+    {
+      "actions": [
+        "AXPress"
+      ],
+      "depth": 5,
+      "element_index": 12,
+      "element_token": "s00000044:12",
+      "enabled": true,
+      "frame": {
+        "h": 24.0,
+        "w": 61.5,
+        "x": 1092.0,
+        "y": 100.0
+      },
+      "label": "Wi-Fi",
+      "parent_index": 11,
+      "role": "AXButton"
+    },
+    {
+      "actions": [
+        "AXShowDefaultUI",
+        "AXShowAlternateUI"
+      ],
+      "depth": 3,
+      "element_index": 13,
+      "element_token": "s00000044:13",
+      "frame": {
+        "h": 32.0,
+        "w": 232.0,
+        "x": 1075.0,
+        "y": 128.0
+      },
+      "parent_index": 1,
+      "role": "AXRow",
+      "selected": false
+    },
+    {
+      "actions": [
+        "AXPress"
+      ],
+      "depth": 5,
+      "element_index": 14,
+      "element_token": "s00000044:14",
+      "enabled": true,
+      "frame": {
+        "h": 24.0,
+        "w": 88.0,
+        "x": 1092.0,
+        "y": 132.0
+      },
+      "label": "Bluetooth",
+      "parent_index": 13,
+      "role": "AXButton"
+    },
+    {
+      "actions": [
+        "AXShowDefaultUI",
+        "AXShowAlternateUI"
+      ],
+      "depth": 3,
+      "element_index": 15,
+      "element_token": "s00000044:15",
+      "frame": {
+        "h": 32.0,
+        "w": 232.0,
+        "x": 1075.0,
+        "y": 160.0
+      },
+      "parent_index": 1,
+      "role": "AXRow",
+      "selected": false
+    },
+    {
+      "actions": [
+        "AXPress"
+      ],
+      "depth": 5,
+      "element_index": 16,
+      "element_token": "s00000044:16",
+      "enabled": true,
+      "frame": {
+        "h": 24.0,
+        "w": 80.0,
+        "x": 1092.0,
+        "y": 164.0
+      },
+      "label": "Network",
+      "parent_index": 15,
+      "role": "AXButton"
+    },
+    {
+      "actions": [
+        "AXShowDefaultUI",
+        "AXShowAlternateUI"
+      ],
+      "depth": 3,
+      "element_index": 17,
+      "element_token": "s00000044:17",
+      "frame": {
+        "h": 32.0,
+        "w": 232.0,
+        "x": 1075.0,
+        "y": 192.0
+      },
+      "parent_index": 1,
+      "role": "AXRow",
+      "selected": false
+    },
+    {
+      "actions": [
+        "AXPress"
+      ],
+      "depth": 5,
+      "element_index": 18,
+      "element_token": "s00000044:18",
+      "enabled": true,
+      "frame": {
+        "h": 24.0,
+        "w": 55.5,
+        "x": 1092.0,
+        "y": 196.0
+      },
+      "label": "VPN",
+      "parent_index": 17,
+      "role": "AXButton"
+    },
+    {
+      "actions": [
+        "AXShowDefaultUI",
+        "AXShowAlternateUI"
+      ],
+      "depth": 3,
+      "element_index": 19,
+      "element_token": "s00000044:19",
+      "frame": {
+        "h": 32.0,
+        "w": 232.0,
+        "x": 1075.0,
+        "y": 224.0
+      },
+      "parent_index": 1,
+      "role": "AXRow",
+      "selected": false
+    },
+    {
+      "actions": [
+        "AXPress"
+      ],
+      "depth": 5,
+      "element_index": 20,
+      "element_token": "s00000044:20",
+      "enabled": true,
+      "frame": {
+        "h": 24.0,
+        "w": 71.5,
+        "x": 1092.0,
+        "y": 228.0
+      },
+      "label": "Energy",
+      "parent_index": 19,
+      "role": "AXButton"
+    },
+    {
+      "actions": [
+        "AXShowDefaultUI",
+        "AXShowAlternateUI"
+      ],
+      "depth": 3,
+      "element_index": 21,
+      "element_token": "s00000044:21",
+      "parent_index": 1,
+      "role": "AXRow",
+      "selected": false
+    },
+    {
+      "actions": [
+        "AXShowDefaultUI",
+        "AXShowAlternateUI"
+      ],
+      "depth": 3,
+      "element_index": 22,
+      "element_token": "s00000044:22",
+      "frame": {
+        "h": 32.0,
+        "w": 232.0,
+        "x": 1075.0,
+        "y": 269.0
+      },
+      "parent_index": 1,
+      "role": "AXRow",
+      "selected": false
+    },
+    {
+      "actions": [
+        "AXPress"
+      ],
+      "depth": 5,
+      "element_index": 23,
+      "element_token": "s00000044:23",
+      "enabled": true,
+      "frame": {
+        "h": 24.0,
+        "w": 76.5,
+        "x": 1092.0,
+        "y": 273.0
+      },
+      "label": "General",
+      "parent_index": 22,
+      "role": "AXButton"
+    },
+    {
+      "actions": [
+        "AXShowDefaultUI",
+        "AXShowAlternateUI"
+      ],
+      "depth": 3,
+      "element_index": 24,
+      "element_token": "s00000044:24",
+      "frame": {
+        "h": 32.0,
+        "w": 232.0,
+        "x": 1075.0,
+        "y": 301.0
+      },
+      "parent_index": 1,
+      "role": "AXRow",
+      "selected": false
+    },
+    {
+      "actions": [
+        "AXPress"
+      ],
+      "depth": 5,
+      "element_index": 25,
+      "element_token": "s00000044:25",
+      "enabled": true,
+      "frame": {
+        "h": 24.0,
+        "w": 105.0,
+        "x": 1092.0,
+        "y": 305.0
+      },
+      "label": "Accessibility",
+      "parent_index": 24,
+      "role": "AXButton"
+    },
+    {
+      "actions": [
+        "AXShowDefaultUI",
+        "AXShowAlternateUI"
+      ],
+      "depth": 3,
+      "element_index": 26,
+      "element_token": "s00000044:26",
+      "frame": {
+        "h": 32.0,
+        "w": 232.0,
+        "x": 1075.0,
+        "y": 333.0
+      },
+      "parent_index": 1,
+      "role": "AXRow",
+      "selected": false
+    },
+    {
+      "actions": [
+        "AXPress"
+      ],
+      "depth": 5,
+      "element_index": 27,
+      "element_token": "s00000044:27",
+      "enabled": true,
+      "frame": {
+        "h": 24.0,
+        "w": 102.0,
+        "x": 1092.0,
+        "y": 337.0
+      },
+      "label": "Appearance",
+      "parent_index": 26,
+      "role": "AXButton"
+    },
+    {
+      "actions": [
+        "AXShowDefaultUI",
+        "AXShowAlternateUI"
+      ],
+      "depth": 3,
+      "element_index": 28,
+      "element_token": "s00000044:28",
+      "frame": {
+        "h": 32.0,
+        "w": 232.0,
+        "x": 1075.0,
+        "y": 365.0
+      },
+      "parent_index": 1,
+      "role": "AXRow",
+      "selected": false
+    },
+    {
+      "actions": [
+        "AXPress"
+      ],
+      "depth": 5,
+      "element_index": 29,
+      "element_token": "s00000044:29",
+      "enabled": true,
+      "frame": {
+        "h": 24.0,
+        "w": 127.0,
+        "x": 1092.0,
+        "y": 369.0
+      },
+      "label": "Desktop & Dock",
+      "parent_index": 28,
+      "role": "AXButton"
+    },
+    {
+      "actions": [
+        "AXShowDefaultUI",
+        "AXShowAlternateUI"
+      ],
+      "depth": 3,
+      "element_index": 30,
+      "element_token": "s00000044:30",
+      "frame": {
+        "h": 32.0,
+        "w": 232.0,
+        "x": 1075.0,
+        "y": 397.0
+      },
+      "parent_index": 1,
+      "role": "AXRow",
+      "selected": false
+    },
+    {
+      "actions": [
+        "AXPress"
+      ],
+      "depth": 5,
+      "element_index": 31,
+      "element_token": "s00000044:31",
+      "enabled": true,
+      "frame": {
+        "h": 24.0,
+        "w": 80.0,
+        "x": 1092.0,
+        "y": 401.0
+      },
+      "label": "Displays",
+      "parent_index": 30,
+      "role": "AXButton"
+    },
+    {
+      "actions": [
+        "AXShowDefaultUI",
+        "AXShowAlternateUI"
+      ],
+      "depth": 3,
+      "element_index": 32,
+      "element_token": "s00000044:32",
+      "frame": {
+        "h": 32.0,
+        "w": 232.0,
+        "x": 1075.0,
+        "y": 429.0
+      },
+      "parent_index": 1,
+      "role": "AXRow",
+      "selected": false
+    },
+    {
+      "actions": [
+        "AXPress"
+      ],
+      "depth": 5,
+      "element_index": 33,
+      "element_token": "s00000044:33",
+      "enabled": true,
+      "frame": {
+        "h": 24.0,
+        "w": 87.0,
+        "x": 1092.0,
+        "y": 433.0
+      },
+      "label": "Menu Bar",
+      "parent_index": 32,
+      "role": "AXButton"
+    },
+    {
+      "actions": [
+        "AXShowDefaultUI",
+        "AXShowAlternateUI"
+      ],
+      "depth": 3,
+      "element_index": 34,
+      "element_token": "s00000044:34",
+      "frame": {
+        "h": 32.0,
+        "w": 232.0,
+        "x": 1075.0,
+        "y": 461.0
+      },
+      "parent_index": 1,
+      "role": "AXRow",
+      "selected": false
+    },
+    {
+      "actions": [
+        "AXPress"
+      ],
+      "depth": 5,
+      "element_index": 35,
+      "element_token": "s00000044:35",
+      "enabled": true,
+      "frame": {
+        "h": 24.0,
+        "w": 48.5,
+        "x": 1092.0,
+        "y": 465.0
+      },
+      "label": "Siri",
+      "parent_index": 34,
+      "role": "AXButton"
+    },
+    {
+      "actions": [
+        "AXShowDefaultUI",
+        "AXShowAlternateUI"
+      ],
+      "depth": 3,
+      "element_index": 36,
+      "element_token": "s00000044:36",
+      "frame": {
+        "h": 32.0,
+        "w": 232.0,
+        "x": 1075.0,
+        "y": 493.0
+      },
+      "parent_index": 1,
+      "role": "AXRow",
+      "selected": false
+    },
+    {
+      "actions": [
+        "AXPress"
+      ],
+      "depth": 5,
+      "element_index": 37,
+      "element_token": "s00000044:37",
+      "enabled": true,
+      "frame": {
+        "h": 24.0,
+        "w": 84.0,
+        "x": 1092.0,
+        "y": 497.0
+      },
+      "label": "Spotlight",
+      "parent_index": 36,
+      "role": "AXButton"
+    },
+    {
+      "actions": [
+        "AXShowDefaultUI",
+        "AXShowAlternateUI"
+      ],
+      "depth": 3,
+      "element_index": 38,
+      "element_token": "s00000044:38",
+      "frame": {
+        "h": 32.0,
+        "w": 232.0,
+        "x": 1075.0,
+        "y": 525.0
+      },
+      "parent_index": 1,
+      "role": "AXRow",
+      "selected": false
+    },
+    {
+      "actions": [
+        "AXPress"
+      ],
+      "depth": 5,
+      "element_index": 39,
+      "element_token": "s00000044:39",
+      "enabled": true,
+      "frame": {
+        "h": 24.0,
+        "w": 89.5,
+        "x": 1092.0,
+        "y": 529.0
+      },
+      "label": "Wallpaper",
+      "parent_index": 38,
+      "role": "AXButton"
+    },
+    {
+      "actions": [
+        "AXShowDefaultUI",
+        "AXShowAlternateUI"
+      ],
+      "depth": 3,
+      "element_index": 40,
+      "element_token": "s00000044:40",
+      "parent_index": 1,
+      "role": "AXRow",
+      "selected": false
+    },
+    {
+      "actions": [
+        "AXShowDefaultUI",
+        "AXShowAlternateUI"
+      ],
+      "depth": 3,
+      "element_index": 41,
+      "element_token": "s00000044:41",
+      "frame": {
+        "h": 32.0,
+        "w": 232.0,
+        "x": 1075.0,
+        "y": 570.0
+      },
+      "parent_index": 1,
+      "role": "AXRow",
+      "selected": false
+    },
+    {
+      "actions": [
+        "AXPress"
+      ],
+      "depth": 5,
+      "element_index": 42,
+      "element_token": "s00000044:42",
+      "enabled": true,
+      "frame": {
+        "h": 24.0,
+        "w": 106.0,
+        "x": 1092.0,
+        "y": 574.0
+      },
+      "label": "Notifications",
+      "parent_index": 41,
+      "role": "AXButton"
+    },
+    {
+      "actions": [
+        "AXShowDefaultUI",
+        "AXShowAlternateUI"
+      ],
+      "depth": 3,
+      "element_index": 43,
+      "element_token": "s00000044:43",
+      "frame": {
+        "h": 32.0,
+        "w": 232.0,
+        "x": 1075.0,
+        "y": 602.0
+      },
+      "parent_index": 1,
+      "role": "AXRow",
+      "selected": false
+    },
+    {
+      "actions": [
+        "AXPress"
+      ],
+      "depth": 5,
+      "element_index": 44,
+      "element_token": "s00000044:44",
+      "enabled": true,
+      "frame": {
+        "h": 24.0,
+        "w": 68.0,
+        "x": 1092.0,
+        "y": 606.0
+      },
+      "label": "Sound",
+      "parent_index": 43,
+      "role": "AXButton"
+    },
+    {
+      "actions": [
+        "AXShowDefaultUI",
+        "AXShowAlternateUI"
+      ],
+      "depth": 3,
+      "element_index": 45,
+      "element_token": "s00000044:45",
+      "frame": {
+        "h": 32.0,
+        "w": 232.0,
+        "x": 1075.0,
+        "y": 634.0
+      },
+      "parent_index": 1,
+      "role": "AXRow",
+      "selected": false
+    },
+    {
+      "actions": [
+        "AXPress"
+      ],
+      "depth": 5,
+      "element_index": 46,
+      "element_token": "s00000044:46",
+      "enabled": true,
+      "frame": {
+        "h": 24.0,
+        "w": 65.5,
+        "x": 1092.0,
+        "y": 638.0
+      },
+      "label": "Focus",
+      "parent_index": 45,
+      "role": "AXButton"
+    },
+    {
+      "actions": [
+        "AXShowDefaultUI",
+        "AXShowAlternateUI"
+      ],
+      "depth": 3,
+      "element_index": 47,
+      "element_token": "s00000044:47",
+      "frame": {
+        "h": 32.0,
+        "w": 232.0,
+        "x": 1075.0,
+        "y": 666.0
+      },
+      "parent_index": 1,
+      "role": "AXRow",
+      "selected": false
+    },
+    {
+      "actions": [
+        "AXPress"
+      ],
+      "depth": 5,
+      "element_index": 48,
+      "element_token": "s00000044:48",
+      "enabled": true,
+      "frame": {
+        "h": 24.0,
+        "w": 105.0,
+        "x": 1092.0,
+        "y": 670.0
+      },
+      "label": "Screen Time",
+      "parent_index": 47,
+      "role": "AXButton"
+    },
+    {
+      "actions": [
+        "AXShowDefaultUI",
+        "AXShowAlternateUI"
+      ],
+      "depth": 3,
+      "element_index": 49,
+      "element_token": "s00000044:49",
+      "parent_index": 1,
+      "role": "AXRow",
+      "selected": false
+    },
+    {
+      "actions": [
+        "AXShowDefaultUI",
+        "AXShowAlternateUI"
+      ],
+      "depth": 3,
+      "element_index": 50,
+      "element_token": "s00000044:50",
+      "frame": {
+        "h": 32.0,
+        "w": 232.0,
+        "x": 1075.0,
+        "y": 711.0
+      },
+      "parent_index": 1,
+      "role": "AXRow",
+      "selected": false
+    },
+    {
+      "actions": [
+        "AXPress"
+      ],
+      "depth": 5,
+      "element_index": 51,
+      "element_token": "s00000044:51",
+      "enabled": true,
+      "frame": {
+        "h": 24.0,
+        "w": 104.0,
+        "x": 1092.0,
+        "y": 715.0
+      },
+      "label": "Lock Screen",
+      "parent_index": 50,
+      "role": "AXButton"
+    },
+    {
+      "actions": [
+        "AXShowDefaultUI",
+        "AXShowAlternateUI"
+      ],
+      "depth": 3,
+      "element_index": 52,
+      "element_token": "s00000044:52",
+      "frame": {
+        "h": 32.0,
+        "w": 232.0,
+        "x": 1075.0,
+        "y": 743.0
+      },
+      "parent_index": 1,
+      "role": "AXRow",
+      "selected": true
+    },
+    {
+      "actions": [
+        "AXPress"
+      ],
+      "depth": 5,
+      "element_index": 53,
+      "element_token": "s00000044:53",
+      "enabled": true,
+      "frame": {
+        "h": 24.0,
+        "w": 145.0,
+        "x": 1092.0,
+        "y": 747.0
+      },
+      "label": "Privacy & Security",
+      "parent_index": 52,
+      "role": "AXButton"
+    },
+    {
+      "actions": [
+        "AXShowDefaultUI",
+        "AXShowAlternateUI"
+      ],
+      "depth": 3,
+      "element_index": 54,
+      "element_token": "s00000044:54",
+      "frame": {
+        "h": 32.0,
+        "w": 232.0,
+        "x": 1075.0,
+        "y": 775.0
+      },
+      "parent_index": 1,
+      "role": "AXRow",
+      "selected": false
+    },
+    {
+      "actions": [
+        "AXPress"
+      ],
+      "depth": 5,
+      "element_index": 55,
+      "element_token": "s00000044:55",
+      "enabled": true,
+      "frame": {
+        "h": 24.0,
+        "w": 157.0,
+        "x": 1092.0,
+        "y": 779.0
+      },
+      "label": "Touch ID & Password",
+      "parent_index": 54,
+      "role": "AXButton"
+    },
+    {
+      "actions": [
+        "AXShowDefaultUI",
+        "AXShowAlternateUI"
+      ],
+      "depth": 3,
+      "element_index": 56,
+      "element_token": "s00000044:56",
+      "frame": {
+        "h": 32.0,
+        "w": 232.0,
+        "x": 1075.0,
+        "y": 807.0
+      },
+      "parent_index": 1,
+      "role": "AXRow",
+      "selected": false
+    },
+    {
+      "actions": [
+        "AXPress"
+      ],
+      "depth": 5,
+      "element_index": 57,
+      "element_token": "s00000044:57",
+      "enabled": true,
+      "frame": {
+        "h": 24.0,
+        "w": 124.5,
+        "x": 1092.0,
+        "y": 811.0
+      },
+      "label": "Users & Groups",
+      "parent_index": 56,
+      "role": "AXButton"
+    },
+    {
+      "actions": [
+        "AXShowDefaultUI",
+        "AXShowAlternateUI"
+      ],
+      "depth": 3,
+      "element_index": 58,
+      "element_token": "s00000044:58",
+      "parent_index": 1,
+      "role": "AXRow",
+      "selected": false
+    },
+    {
+      "actions": [
+        "AXShowDefaultUI",
+        "AXShowAlternateUI"
+      ],
+      "depth": 3,
+      "element_index": 59,
+      "element_token": "s00000044:59",
+      "frame": {
+        "h": 32.0,
+        "w": 232.0,
+        "x": 1075.0,
+        "y": 852.0
+      },
+      "parent_index": 1,
+      "role": "AXRow",
+      "selected": false
+    },
+    {
+      "actions": [
+        "AXPress"
+      ],
+      "depth": 5,
+      "element_index": 60,
+      "element_token": "s00000044:60",
+      "enabled": true,
+      "frame": {
+        "h": 24.0,
+        "w": 109.0,
+        "x": 1092.0,
+        "y": 856.0
+      },
+      "label": "Game Center",
+      "parent_index": 59,
+      "role": "AXButton"
+    },
+    {
+      "actions": [
+        "AXShowDefaultUI",
+        "AXShowAlternateUI"
+      ],
+      "depth": 3,
+      "element_index": 61,
+      "element_token": "s00000044:61",
+      "frame": {
+        "h": 32.0,
+        "w": 232.0,
+        "x": 1075.0,
+        "y": 884.0
+      },
+      "parent_index": 1,
+      "role": "AXRow",
+      "selected": false
+    },
+    {
+      "actions": [
+        "AXPress"
+      ],
+      "depth": 5,
+      "element_index": 62,
+      "element_token": "s00000044:62",
+      "enabled": true,
+      "frame": {
+        "h": 24.0,
+        "w": 68.0,
+        "x": 1092.0,
+        "y": 888.0
+      },
+      "label": "iCloud",
+      "parent_index": 61,
+      "role": "AXButton"
+    },
+    {
+      "actions": [
+        "AXShowDefaultUI",
+        "AXShowAlternateUI"
+      ],
+      "depth": 3,
+      "element_index": 63,
+      "element_token": "s00000044:63",
+      "frame": {
+        "h": 32.0,
+        "w": 232.0,
+        "x": 1075.0,
+        "y": 916.0
+      },
+      "parent_index": 1,
+      "role": "AXRow",
+      "selected": false
+    },
+    {
+      "actions": [
+        "AXPress"
+      ],
+      "depth": 5,
+      "element_index": 64,
+      "element_token": "s00000044:64",
+      "enabled": true,
+      "frame": {
+        "h": 24.0,
+        "w": 136.5,
+        "x": 1092.0,
+        "y": 920.0
+      },
+      "label": "Internet Accounts",
+      "parent_index": 63,
+      "role": "AXButton"
+    },
+    {
+      "actions": [
+        "AXShowDefaultUI",
+        "AXShowAlternateUI"
+      ],
+      "depth": 3,
+      "element_index": 65,
+      "element_token": "s00000044:65",
+      "frame": {
+        "h": 32.0,
+        "w": 232.0,
+        "x": 1075.0,
+        "y": 948.0
+      },
+      "parent_index": 1,
+      "role": "AXRow",
+      "selected": false
+    },
+    {
+      "actions": [
+        "AXPress"
+      ],
+      "depth": 5,
+      "element_index": 66,
+      "element_token": "s00000044:66",
+      "enabled": true,
+      "frame": {
+        "h": 24.0,
+        "w": 143.5,
+        "x": 1092.0,
+        "y": 952.0
+      },
+      "label": "Wallet & Apple Pay",
+      "parent_index": 65,
+      "role": "AXButton"
+    },
+    {
+      "actions": [
+        "AXShowDefaultUI",
+        "AXShowAlternateUI"
+      ],
+      "depth": 3,
+      "element_index": 67,
+      "element_token": "s00000044:67",
+      "parent_index": 1,
+      "role": "AXRow",
+      "selected": false
+    },
+    {
+      "actions": [
+        "AXShowDefaultUI",
+        "AXShowAlternateUI"
+      ],
+      "depth": 3,
+      "element_index": 68,
+      "element_token": "s00000044:68",
+      "frame": {
+        "h": 32.0,
+        "w": 232.0,
+        "x": 1075.0,
+        "y": 993.0
+      },
+      "parent_index": 1,
+      "role": "AXRow",
+      "selected": false
+    },
+    {
+      "actions": [
+        "AXPress"
+      ],
+      "depth": 5,
+      "element_index": 69,
+      "element_token": "s00000044:69",
+      "enabled": true,
+      "frame": {
+        "h": 24.0,
+        "w": 86.5,
+        "x": 1092.0,
+        "y": 997.0
+      },
+      "label": "Keyboard",
+      "parent_index": 68,
+      "role": "AXButton"
+    },
+    {
+      "actions": [
+        "AXShowDefaultUI",
+        "AXShowAlternateUI"
+      ],
+      "depth": 3,
+      "element_index": 70,
+      "element_token": "s00000044:70",
+      "frame": {
+        "h": 32.0,
+        "w": 232.0,
+        "x": 1075.0,
+        "y": 1025.0
+      },
+      "parent_index": 1,
+      "role": "AXRow",
+      "selected": false
+    },
+    {
+      "actions": [
+        "AXPress"
+      ],
+      "depth": 5,
+      "element_index": 71,
+      "element_token": "s00000044:71",
+      "enabled": true,
+      "label": "Mouse",
+      "parent_index": 70,
+      "role": "AXButton"
+    },
+    {
+      "actions": [
+        "AXShowDefaultUI",
+        "AXShowAlternateUI"
+      ],
+      "depth": 3,
+      "element_index": 72,
+      "element_token": "s00000044:72",
+      "frame": {
+        "h": 32.0,
+        "w": 232.0,
+        "x": 1075.0,
+        "y": 1057.0
+      },
+      "parent_index": 1,
+      "role": "AXRow",
+      "selected": false
+    },
+    {
+      "actions": [
+        "AXPress"
+      ],
+      "depth": 5,
+      "element_index": 73,
+      "element_token": "s00000044:73",
+      "enabled": true,
+      "label": "Printers & Scanners",
+      "parent_index": 72,
+      "role": "AXButton"
+    },
+    {
+      "actions": [
+        "AXPress"
+      ],
+      "depth": 3,
+      "element_index": 74,
+      "element_token": "s00000044:74",
+      "parent_index": 0,
+      "role": "AXButton"
+    },
+    {
+      "actions": [
+        "AXPress"
+      ],
+      "depth": 3,
+      "element_index": 75,
+      "element_token": "s00000044:75",
+      "parent_index": 0,
+      "role": "AXButton"
+    },
+    {
+      "actions": [
+        "AXPress"
+      ],
+      "depth": 3,
+      "element_index": 76,
+      "element_token": "s00000044:76",
+      "frame": {
+        "h": 64.0,
+        "w": 6.0,
+        "x": 1298.0,
+        "y": 925.0
+      },
+      "parent_index": 0,
+      "role": "AXButton"
+    },
+    {
+      "actions": [
+        "AXPress"
+      ],
+      "depth": 3,
+      "element_index": 77,
+      "element_token": "s00000044:77",
+      "frame": {
+        "h": 129.0,
+        "w": 6.0,
+        "x": 1298.0,
+        "y": 131.0
+      },
+      "parent_index": 0,
+      "role": "AXButton"
+    },
+    {
+      "actions": [
+        "AXShowMenu",
+        "AXConfirm"
+      ],
+      "depth": 2,
+      "element_index": 78,
+      "element_token": "s00000044:78",
+      "enabled": true,
+      "frame": {
+        "h": 28.0,
+        "w": 212.0,
+        "x": 1085.0,
+        "y": 91.0
+      },
+      "label": "Search",
+      "parent_index": 0,
+      "role": "AXTextField",
+      "value": "Search"
+    },
+    {
+      "actions": [
+        "AXPress"
+      ],
+      "depth": 3,
+      "element_index": 79,
+      "element_token": "s00000044:79",
+      "enabled": true,
+      "frame": {
+        "h": 28.0,
+        "w": 25.0,
+        "x": 1088.0,
+        "y": 91.5
+      },
+      "label": "Search",
+      "parent_index": 78,
+      "role": "AXButton"
+    },
+    {
+      "actions": [
+        "AXShowDefaultUI",
+        "AXShowAlternateUI"
+      ],
+      "depth": 3,
+      "element_index": 80,
+      "element_token": "s00000044:80",
+      "frame": {
+        "h": 40.0,
+        "w": 468.0,
+        "x": 1327.0,
+        "y": 149.5
+      },
+      "parent_index": 0,
+      "role": "AXRow",
+      "selected": false
+    },
+    {
+      "actions": [
+        "AXPress",
+        "AXPress",
+        "AXShowMenu"
+      ],
+      "depth": 5,
+      "element_index": 81,
+      "element_token": "s00000044:81",
+      "enabled": true,
+      "frame": {
+        "h": 16.0,
+        "w": 36.0,
+        "x": 1749.0,
+        "y": 163.5
+      },
+      "label": "Claude_Toggle",
+      "parent_index": 80,
+      "role": "AXCheckBox",
+      "selected": true,
+      "value": "1"
+    },
+    {
+      "actions": [
+        "AXShowDefaultUI",
+        "AXShowAlternateUI"
+      ],
+      "depth": 3,
+      "element_index": 82,
+      "element_token": "s00000044:82",
+      "frame": {
+        "h": 40.0,
+        "w": 468.0,
+        "x": 1327.0,
+        "y": 189.5
+      },
+      "parent_index": 0,
+      "role": "AXRow",
+      "selected": false
+    },
+    {
+      "actions": [
+        "AXPress",
+        "AXPress",
+        "AXShowMenu"
+      ],
+      "depth": 5,
+      "element_index": 83,
+      "element_token": "s00000044:83",
+      "enabled": true,
+      "frame": {
+        "h": 16.0,
+        "w": 36.0,
+        "x": 1749.0,
+        "y": 203.5
+      },
+      "label": "CuaDriver_Toggle",
+      "parent_index": 82,
+      "role": "AXCheckBox",
+      "selected": true,
+      "value": "1"
+    },
+    {
+      "actions": [
+        "AXShowDefaultUI",
+        "AXShowAlternateUI"
+      ],
+      "depth": 3,
+      "element_index": 84,
+      "element_token": "s00000044:84",
+      "frame": {
+        "h": 40.0,
+        "w": 468.0,
+        "x": 1327.0,
+        "y": 229.5
+      },
+      "parent_index": 0,
+      "role": "AXRow",
+      "selected": false
+    },
+    {
+      "actions": [
+        "AXPress",
+        "AXPress",
+        "AXShowMenu"
+      ],
+      "depth": 5,
+      "element_index": 85,
+      "element_token": "s00000044:85",
+      "enabled": true,
+      "frame": {
+        "h": 16.0,
+        "w": 36.0,
+        "x": 1749.0,
+        "y": 243.5
+      },
+      "label": "Gemini_Toggle",
+      "parent_index": 84,
+      "role": "AXCheckBox",
+      "selected": true,
+      "value": "1"
+    },
+    {
+      "actions": [
+        "AXShowDefaultUI",
+        "AXShowAlternateUI"
+      ],
+      "depth": 3,
+      "element_index": 86,
+      "element_token": "s00000044:86",
+      "frame": {
+        "h": 40.0,
+        "w": 468.0,
+        "x": 1327.0,
+        "y": 269.5
+      },
+      "parent_index": 0,
+      "role": "AXRow",
+      "selected": false
+    },
+    {
+      "actions": [
+        "AXPress",
+        "AXPress",
+        "AXShowMenu"
+      ],
+      "depth": 5,
+      "element_index": 87,
+      "element_token": "s00000044:87",
+      "enabled": true,
+      "frame": {
+        "h": 16.0,
+        "w": 36.0,
+        "x": 1749.0,
+        "y": 283.5
+      },
+      "label": "Google Chrome_Toggle",
+      "parent_index": 86,
+      "role": "AXCheckBox",
+      "selected": true,
+      "value": "1"
+    },
+    {
+      "actions": [
+        "AXShowDefaultUI",
+        "AXShowAlternateUI"
+      ],
+      "depth": 3,
+      "element_index": 88,
+      "element_token": "s00000044:88",
+      "frame": {
+        "h": 40.0,
+        "w": 468.0,
+        "x": 1327.0,
+        "y": 309.5
+      },
+      "parent_index": 0,
+      "role": "AXRow",
+      "selected": false
+    },
+    {
+      "actions": [
+        "AXPress",
+        "AXPress",
+        "AXShowMenu"
+      ],
+      "depth": 5,
+      "element_index": 89,
+      "element_token": "s00000044:89",
+      "enabled": true,
+      "frame": {
+        "h": 16.0,
+        "w": 36.0,
+        "x": 1749.0,
+        "y": 323.5
+      },
+      "label": "Google Chrome.app.bundle_Toggle",
+      "parent_index": 88,
+      "role": "AXCheckBox",
+      "selected": false,
+      "value": "0"
+    },
+    {
+      "actions": [
+        "AXShowDefaultUI",
+        "AXShowAlternateUI"
+      ],
+      "depth": 3,
+      "element_index": 90,
+      "element_token": "s00000044:90",
+      "frame": {
+        "h": 40.0,
+        "w": 468.0,
+        "x": 1327.0,
+        "y": 349.5
+      },
+      "parent_index": 0,
+      "role": "AXRow",
+      "selected": false
+    },
+    {
+      "actions": [
+        "AXPress",
+        "AXPress",
+        "AXShowMenu"
+      ],
+      "depth": 5,
+      "element_index": 91,
+      "element_token": "s00000044:91",
+      "enabled": true,
+      "frame": {
+        "h": 16.0,
+        "w": 36.0,
+        "x": 1749.0,
+        "y": 363.5
+      },
+      "label": "node_Toggle",
+      "parent_index": 90,
+      "role": "AXCheckBox",
+      "selected": true,
+      "value": "1"
+    },
+    {
+      "actions": [
+        "AXShowDefaultUI",
+        "AXShowAlternateUI"
+      ],
+      "depth": 3,
+      "element_index": 92,
+      "element_token": "s00000044:92",
+      "frame": {
+        "h": 40.0,
+        "w": 468.0,
+        "x": 1327.0,
+        "y": 389.5
+      },
+      "parent_index": 0,
+      "role": "AXRow",
+      "selected": false
+    },
+    {
+      "actions": [
+        "AXPress",
+        "AXPress",
+        "AXShowMenu"
+      ],
+      "depth": 5,
+      "element_index": 93,
+      "element_token": "s00000044:93",
+      "enabled": true,
+      "frame": {
+        "h": 16.0,
+        "w": 36.0,
+        "x": 1749.0,
+        "y": 403.5
+      },
+      "label": "Superset_Toggle",
+      "parent_index": 92,
+      "role": "AXCheckBox",
+      "selected": true,
+      "value": "1"
+    },
+    {
+      "actions": [
+        "AXShowDefaultUI",
+        "AXShowAlternateUI"
+      ],
+      "depth": 3,
+      "element_index": 94,
+      "element_token": "s00000044:94",
+      "frame": {
+        "h": 40.0,
+        "w": 468.0,
+        "x": 1327.0,
+        "y": 429.5
+      },
+      "parent_index": 0,
+      "role": "AXRow",
+      "selected": false
+    },
+    {
+      "actions": [
+        "AXPress",
+        "AXPress",
+        "AXShowMenu"
+      ],
+      "depth": 5,
+      "element_index": 95,
+      "element_token": "s00000044:95",
+      "enabled": true,
+      "frame": {
+        "h": 16.0,
+        "w": 36.0,
+        "x": 1749.0,
+        "y": 443.5
+      },
+      "label": "Terminal_Toggle",
+      "parent_index": 94,
+      "role": "AXCheckBox",
+      "selected": true,
+      "value": "1"
+    },
+    {
+      "actions": [
+        "AXPress"
+      ],
+      "depth": 2,
+      "element_index": 96,
+      "element_token": "s00000044:96",
+      "enabled": true,
+      "frame": {
+        "h": 9.5,
+        "w": 9.5,
+        "x": 1334.5,
+        "y": 477.5
+      },
+      "label": "Add",
+      "parent_index": 0,
+      "role": "AXButton"
+    },
+    {
+      "actions": [
+        "AXShowDefaultUI",
+        "AXShowAlternateUI"
+      ],
+      "depth": 3,
+      "element_index": 97,
+      "element_token": "s00000044:97",
+      "frame": {
+        "h": 40.0,
+        "w": 468.0,
+        "x": 1327.0,
+        "y": 565.5
+      },
+      "parent_index": 0,
+      "role": "AXRow",
+      "selected": false
+    },
+    {
+      "actions": [
+        "AXPress",
+        "AXPress",
+        "AXShowMenu"
+      ],
+      "depth": 5,
+      "element_index": 98,
+      "element_token": "s00000044:98",
+      "enabled": true,
+      "frame": {
+        "h": 16.0,
+        "w": 36.0,
+        "x": 1749.0,
+        "y": 579.5
+      },
+      "label": "Gemini_Toggle",
+      "parent_index": 97,
+      "role": "AXCheckBox",
+      "selected": true,
+      "value": "1"
+    },
+    {
+      "actions": [
+        "AXPress"
+      ],
+      "depth": 2,
+      "element_index": 99,
+      "element_token": "s00000044:99",
+      "enabled": true,
+      "frame": {
+        "h": 9.5,
+        "w": 9.5,
+        "x": 1334.5,
+        "y": 613.0
+      },
+      "label": "Add",
+      "parent_index": 0,
+      "role": "AXButton"
+    },
+    {
+      "actions": [
+        "AXShowMenu"
+      ],
+      "depth": 1,
+      "element_index": 100,
+      "element_token": "s00000044:100",
+      "frame": {
+        "h": 52.0,
+        "w": 740.0,
+        "x": 1075.0,
+        "y": 30.0
+      },
+      "parent_index": 0,
+      "role": "AXToolbar"
+    },
+    {
+      "actions": [
+        "AXPress",
+        "AXShowMenu"
+      ],
+      "depth": 2,
+      "element_index": 101,
+      "element_token": "s00000044:101",
+      "enabled": true,
+      "frame": {
+        "h": 36.0,
+        "w": 36.0,
+        "x": 1315.0,
+        "y": 38.0
+      },
+      "label": "Go Back",
+      "parent_index": 100,
+      "role": "AXButton"
+    },
+    {
+      "actions": [
+        "AXPress"
+      ],
+      "depth": 1,
+      "element_index": 102,
+      "element_token": "s00000044:102",
+      "enabled": true,
+      "frame": {
+        "h": 16.0,
+        "w": 16.0,
+        "x": 1093.0,
+        "y": 48.0
+      },
+      "parent_index": 0,
+      "role": "AXButton"
+    },
+    {
+      "actions": [
+        "AXPress",
+        "AXShowMenu"
+      ],
+      "depth": 1,
+      "element_index": 103,
+      "element_token": "s00000044:103",
+      "enabled": true,
+      "frame": {
+        "h": 16.0,
+        "w": 16.0,
+        "x": 1139.0,
+        "y": 48.0
+      },
+      "parent_index": 0,
+      "role": "AXButton"
+    },
+    {
+      "actions": [
+        "AXPress"
+      ],
+      "depth": 1,
+      "element_index": 104,
+      "element_token": "s00000044:104",
+      "enabled": true,
+      "frame": {
+        "h": 16.0,
+        "w": 16.0,
+        "x": 1116.0,
+        "y": 48.0
+      },
+      "parent_index": 0,
+      "role": "AXButton"
+    },
+    {
+      "actions": [
+        "AXPress"
+      ],
+      "depth": 1,
+      "element_index": 105,
+      "element_token": "s00000044:105",
+      "enabled": true,
+      "frame": {
+        "h": 52.0,
+        "w": 411.0,
+        "x": 1392.0,
+        "y": 30.0
+      },
+      "label": "Screen & System Audio Recording",
+      "parent_index": 0,
+      "role": "AXStaticText",
+      "value": "Screen & System Audio Recording"
+    },
+    {
+      "actions": [
+        "AXCancel"
+      ],
+      "depth": 0,
+      "element_index": 106,
+      "element_token": "s00000044:106",
+      "enabled": true,
+      "frame": {
+        "h": 30.0,
+        "w": 1920.0,
+        "x": 0.0,
+        "y": 0.0
+      },
+      "role": "AXMenuBar",
+      "selected": false
+    },
+    {
+      "actions": [
+        "AXCancel",
+        "AXPress",
+        "AXPick"
+      ],
+      "depth": 1,
+      "element_index": 107,
+      "element_token": "s00000044:107",
+      "enabled": true,
+      "frame": {
+        "h": 30.0,
+        "w": 34.0,
+        "x": 10.0,
+        "y": 0.0
+      },
+      "label": "Apple",
+      "parent_index": 106,
+      "role": "AXMenuBarItem",
+      "selected": false
+    },
+    {
+      "actions": [
+        "AXCancel"
+      ],
+      "depth": 2,
+      "element_index": 108,
+      "element_token": "s00000044:108",
+      "enabled": true,
+      "parent_index": 107,
+      "role": "AXMenu",
+      "selected": false
+    },
+    {
+      "actions": [
+        "AXCancel",
+        "AXPress",
+        "AXPick"
+      ],
+      "depth": 3,
+      "element_index": 109,
+      "element_token": "s00000044:109",
+      "enabled": true,
+      "label": "About This Mac",
+      "parent_index": 108,
+      "role": "AXMenuItem",
+      "selected": false
+    },
+    {
+      "actions": [
+        "AXCancel",
+        "AXPress",
+        "AXPick"
+      ],
+      "depth": 3,
+      "element_index": 110,
+      "element_token": "s00000044:110",
+      "enabled": true,
+      "label": "System Information",
+      "parent_index": 108,
+      "role": "AXMenuItem",
+      "selected": false
+    },
+    {
+      "actions": [
+        "AXCancel",
+        "AXPress",
+        "AXPick"
+      ],
+      "depth": 3,
+      "element_index": 111,
+      "element_token": "s00000044:111",
+      "enabled": true,
+      "label": "System Settings…, 1 update",
+      "parent_index": 108,
+      "role": "AXMenuItem",
+      "selected": false
+    },
+    {
+      "actions": [
+        "AXCancel",
+        "AXPress",
+        "AXPick"
+      ],
+      "depth": 3,
+      "element_index": 112,
+      "element_token": "s00000044:112",
+      "enabled": true,
+      "label": "App Store",
+      "parent_index": 108,
+      "role": "AXMenuItem",
+      "selected": false
+    },
+    {
+      "actions": [
+        "AXCancel",
+        "AXPress",
+        "AXPick"
+      ],
+      "depth": 3,
+      "element_index": 113,
+      "element_token": "s00000044:113",
+      "enabled": true,
+      "label": "Recent Items",
+      "parent_index": 108,
+      "role": "AXMenuItem",
+      "selected": false
+    },
+    {
+      "actions": [
+        "AXCancel"
+      ],
+      "depth": 4,
+      "element_index": 114,
+      "element_token": "s00000044:114",
+      "enabled": true,
+      "parent_index": 113,
+      "role": "AXMenu",
+      "selected": false
+    },
+    {
+      "actions": [
+        "AXCancel",
+        "AXPress",
+        "AXPick"
+      ],
+      "depth": 5,
+      "element_index": 115,
+      "element_token": "s00000044:115",
+      "enabled": true,
+      "label": "App Store",
+      "parent_index": 114,
+      "role": "AXMenuItem",
+      "selected": false
+    },
+    {
+      "actions": [
+        "AXCancel",
+        "AXPress",
+        "AXPick"
+      ],
+      "depth": 5,
+      "element_index": 116,
+      "element_token": "s00000044:116",
+      "enabled": true,
+      "label": "Show “App Store” in Finder",
+      "parent_index": 114,
+      "role": "AXMenuItem",
+      "selected": false
+    },
+    {
+      "actions": [
+        "AXCancel",
+        "AXPress",
+        "AXPick"
+      ],
+      "depth": 5,
+      "element_index": 117,
+      "element_token": "s00000044:117",
+      "enabled": true,
+      "label": "Claude",
+      "parent_index": 114,
+      "role": "AXMenuItem",
+      "selected": false
+    },
+    {
+      "actions": [
+        "AXCancel",
+        "AXPress",
+        "AXPick"
+      ],
+      "depth": 5,
+      "element_index": 118,
+      "element_token": "s00000044:118",
+      "enabled": true,
+      "label": "Show “Claude” in Finder",
+      "parent_index": 114,
+      "role": "AXMenuItem",
+      "selected": false
+    },
+    {
+      "actions": [
+        "AXCancel",
+        "AXPress",
+        "AXPick"
+      ],
+      "depth": 5,
+      "element_index": 119,
+      "element_token": "s00000044:119",
+      "enabled": true,
+      "label": "Device Hub",
+      "parent_index": 114,
+      "role": "AXMenuItem",
+      "selected": false
+    },
+    {
+      "actions": [
+        "AXCancel",
+        "AXPress",
+        "AXPick"
+      ],
+      "depth": 5,
+      "element_index": 120,
+      "element_token": "s00000044:120",
+      "enabled": true,
+      "label": "Show “Device Hub” in Finder",
+      "parent_index": 114,
+      "role": "AXMenuItem",
+      "selected": false
+    },
+    {
+      "actions": [
+        "AXCancel",
+        "AXPress",
+        "AXPick"
+      ],
+      "depth": 5,
+      "element_index": 121,
+      "element_token": "s00000044:121",
+      "enabled": true,
+      "label": "Finder",
+      "parent_index": 114,
+      "role": "AXMenuItem",
+      "selected": false
+    },
+    {
+      "actions": [
+        "AXCancel",
+        "AXPress",
+        "AXPick"
+      ],
+      "depth": 5,
+      "element_index": 122,
+      "element_token": "s00000044:122",
+      "enabled": true,
+      "label": "Show “Finder” in Finder",
+      "parent_index": 114,
+      "role": "AXMenuItem",
+      "selected": false
+    },
+    {
+      "actions": [
+        "AXCancel",
+        "AXPress",
+        "AXPick"
+      ],
+      "depth": 5,
+      "element_index": 123,
+      "element_token": "s00000044:123",
+      "enabled": true,
+      "label": "Messages",
+      "parent_index": 114,
+      "role": "AXMenuItem",
+      "selected": false
+    },
+    {
+      "actions": [
+        "AXCancel",
+        "AXPress",
+        "AXPick"
+      ],
+      "depth": 5,
+      "element_index": 124,
+      "element_token": "s00000044:124",
+      "enabled": true,
+      "label": "Show “Messages” in Finder",
+      "parent_index": 114,
+      "role": "AXMenuItem",
+      "selected": false
+    },
+    {
+      "actions": [
+        "AXCancel",
+        "AXPress",
+        "AXPick"
+      ],
+      "depth": 5,
+      "element_index": 125,
+      "element_token": "s00000044:125",
+      "enabled": true,
+      "label": "Passwords",
+      "parent_index": 114,
+      "role": "AXMenuItem",
+      "selected": false
+    },
+    {
+      "actions": [
+        "AXCancel",
+        "AXPress",
+        "AXPick"
+      ],
+      "depth": 5,
+      "element_index": 126,
+      "element_token": "s00000044:126",
+      "enabled": true,
+      "label": "Show “Passwords” in Finder",
+      "parent_index": 114,
+      "role": "AXMenuItem",
+      "selected": false
+    },
+    {
+      "actions": [
+        "AXCancel",
+        "AXPress",
+        "AXPick"
+      ],
+      "depth": 5,
+      "element_index": 127,
+      "element_token": "s00000044:127",
+      "enabled": true,
+      "label": "Phone",
+      "parent_index": 114,
+      "role": "AXMenuItem",
+      "selected": false
+    },
+    {
+      "actions": [
+        "AXCancel",
+        "AXPress",
+        "AXPick"
+      ],
+      "depth": 5,
+      "element_index": 128,
+      "element_token": "s00000044:128",
+      "enabled": true,
+      "label": "Show “Phone” in Finder",
+      "parent_index": 114,
+      "role": "AXMenuItem",
+      "selected": false
+    },
+    {
+      "actions": [
+        "AXCancel",
+        "AXPress",
+        "AXPick"
+      ],
+      "depth": 5,
+      "element_index": 129,
+      "element_token": "s00000044:129",
+      "enabled": true,
+      "label": "Safari",
+      "parent_index": 114,
+      "role": "AXMenuItem",
+      "selected": false
+    },
+    {
+      "actions": [
+        "AXCancel",
+        "AXPress",
+        "AXPick"
+      ],
+      "depth": 5,
+      "element_index": 130,
+      "element_token": "s00000044:130",
+      "enabled": true,
+      "label": "Show “Safari” in Finder",
+      "parent_index": 114,
+      "role": "AXMenuItem",
+      "selected": false
+    },
+    {
+      "actions": [
+        "AXCancel",
+        "AXPress",
+        "AXPick"
+      ],
+      "depth": 5,
+      "element_index": 131,
+      "element_token": "s00000044:131",
+      "enabled": true,
+      "label": "System Settings",
+      "parent_index": 114,
+      "role": "AXMenuItem",
+      "selected": false
+    },
+    {
+      "actions": [
+        "AXCancel",
+        "AXPress",
+        "AXPick"
+      ],
+      "depth": 5,
+      "element_index": 132,
+      "element_token": "s00000044:132",
+      "enabled": true,
+      "label": "Show “System Settings” in Finder",
+      "parent_index": 114,
+      "role": "AXMenuItem",
+      "selected": false
+    },
+    {
+      "actions": [
+        "AXCancel",
+        "AXPress",
+        "AXPick"
+      ],
+      "depth": 5,
+      "element_index": 133,
+      "element_token": "s00000044:133",
+      "enabled": true,
+      "label": "Xcode",
+      "parent_index": 114,
+      "role": "AXMenuItem",
+      "selected": false
+    },
+    {
+      "actions": [
+        "AXCancel",
+        "AXPress",
+        "AXPick"
+      ],
+      "depth": 5,
+      "element_index": 134,
+      "element_token": "s00000044:134",
+      "enabled": true,
+      "label": "Show “Xcode” in Finder",
+      "parent_index": 114,
+      "role": "AXMenuItem",
+      "selected": false
+    },
+    {
+      "actions": [
+        "AXCancel",
+        "AXPress",
+        "AXPick"
+      ],
+      "depth": 5,
+      "element_index": 135,
+      "element_token": "s00000044:135",
+      "enabled": true,
+      "label": "2025-06-02 -- 2025-06-09 Trib Weekly Report.pdf",
+      "parent_index": 114,
+      "role": "AXMenuItem",
+      "selected": false
+    },
+    {
+      "actions": [
+        "AXCancel",
+        "AXPress",
+        "AXPick"
+      ],
+      "depth": 5,
+      "element_index": 136,
+      "element_token": "s00000044:136",
+      "enabled": true,
+      "label": "Show “2025-06-02 -- 2025-06-09 Trib Weekly Report.pdf” in Finder",
+      "parent_index": 114,
+      "role": "AXMenuItem",
+      "selected": false
+    },
+    {
+      "actions": [
+        "AXCancel",
+        "AXPress",
+        "AXPick"
+      ],
+      "depth": 5,
+      "element_index": 137,
+      "element_token": "s00000044:137",
+      "enabled": true,
+      "label": "2025-06-09 -- 2025-06-16 Trib Weekly Report.pdf",
+      "parent_index": 114,
+      "role": "AXMenuItem",
+      "selected": false
+    },
+    {
+      "actions": [
+        "AXCancel",
+        "AXPress",
+        "AXPick"
+      ],
+      "depth": 5,
+      "element_index": 138,
+      "element_token": "s00000044:138",
+      "enabled": true,
+      "label": "Show “2025-06-09 -- 2025-06-16 Trib Weekly Report.pdf” in Finder",
+      "parent_index": 114,
+      "role": "AXMenuItem",
+      "selected": false
+    },
+    {
+      "actions": [
+        "AXCancel",
+        "AXPress",
+        "AXPick"
+      ],
+      "depth": 5,
+      "element_index": 139,
+      "element_token": "s00000044:139",
+      "enabled": true,
+      "label": "2026-02-02 -- 2026-02-09 Trib Weekly Report.pdf",
+      "parent_index": 114,
+      "role": "AXMenuItem",
+      "selected": false
+    },
+    {
+      "actions": [
+        "AXCancel",
+        "AXPress",
+        "AXPick"
+      ],
+      "depth": 5,
+      "element_index": 140,
+      "element_token": "s00000044:140",
+      "enabled": true,
+      "label": "Show “2026-02-02 -- 2026-02-09 Trib Weekly Report.pdf” in Finder",
+      "parent_index": 114,
+      "role": "AXMenuItem",
+      "selected": false
+    },
+    {
+      "actions": [
+        "AXCancel",
+        "AXPress",
+        "AXPick"
+      ],
+      "depth": 5,
+      "element_index": 141,
+      "element_token": "s00000044:141",
+      "enabled": true,
+      "label": "2026-03-16 -- 2026-03-23 Trib Weekly Report.pdf",
+      "parent_index": 114,
+      "role": "AXMenuItem",
+      "selected": false
+    },
+    {
+      "actions": [
+        "AXCancel",
+        "AXPress",
+        "AXPick"
+      ],
+      "depth": 5,
+      "element_index": 142,
+      "element_token": "s00000044:142",
+      "enabled": true,
+      "label": "Show “2026-03-16 -- 2026-03-23 Trib Weekly Report.pdf” in Finder",
+      "parent_index": 114,
+      "role": "AXMenuItem",
+      "selected": false
+    },
+    {
+      "actions": [
+        "AXCancel",
+        "AXPress",
+        "AXPick"
+      ],
+      "depth": 5,
+      "element_index": 143,
+      "element_token": "s00000044:143",
+      "enabled": true,
+      "label": "2026-03-23 -- 2026-03-30 Trib Weekly Report.pdf",
+      "parent_index": 114,
+      "role": "AXMenuItem",
+      "selected": false
+    },
+    {
+      "actions": [
+        "AXCancel",
+        "AXPress",
+        "AXPick"
+      ],
+      "depth": 5,
+      "element_index": 144,
+      "element_token": "s00000044:144",
+      "enabled": true,
+      "label": "Show “2026-03-23 -- 2026-03-30 Trib Weekly Report.pdf” in Finder",
+      "parent_index": 114,
+      "role": "AXMenuItem",
+      "selected": false
+    },
+    {
+      "actions": [
+        "AXCancel",
+        "AXPress",
+        "AXPick"
+      ],
+      "depth": 5,
+      "element_index": 145,
+      "element_token": "s00000044:145",
+      "enabled": true,
+      "label": "CLAUDE.md",
+      "parent_index": 114,
+      "role": "AXMenuItem",
+      "selected": false
+    },
+    {
+      "actions": [
+        "AXCancel",
+        "AXPress",
+        "AXPick"
+      ],
+      "depth": 5,
+      "element_index": 146,
+      "element_token": "s00000044:146",
+      "enabled": true,
+      "label": "Show “CLAUDE.md” in Finder",
+      "parent_index": 114,
+      "role": "AXMenuItem",
+      "selected": false
+    },
+    {
+      "actions": [
+        "AXCancel",
+        "AXPress",
+        "AXPick"
+      ],
+      "depth": 5,
+      "element_index": 147,
+      "element_token": "s00000044:147",
+      "enabled": true,
+      "label": "dd-amicii-documente.zip",
+      "parent_index": 114,
+      "role": "AXMenuItem",
+      "selected": false
+    },
+    {
+      "actions": [
+        "AXCancel",
+        "AXPress",
+        "AXPick"
+      ],
+      "depth": 5,
+      "element_index": 148,
+      "element_token": "s00000044:148",
+      "enabled": true,
+      "label": "Show “dd-amicii-documente.zip” in Finder",
+      "parent_index": 114,
+      "role": "AXMenuItem",
+      "selected": false
+    },
+    {
+      "actions": [
+        "AXCancel",
+        "AXPress",
+        "AXPick"
+      ],
+      "depth": 5,
+      "element_index": 149,
+      "element_token": "s00000044:149",
+      "enabled": true,
+      "label": "IMG_5678.HEIC",
+      "parent_index": 114,
+      "role": "AXMenuItem",
+      "selected": false
+    },
+    {
+      "actions": [
+        "AXCancel",
+        "AXPress",
+        "AXPick"
+      ],
+      "depth": 5,
+      "element_index": 150,
+      "element_token": "s00000044:150",
+      "enabled": true,
+      "label": "Show “IMG_5678.HEIC” in Finder",
+      "parent_index": 114,
+      "role": "AXMenuItem",
+      "selected": false
+    },
+    {
+      "actions": [
+        "AXCancel",
+        "AXPress",
+        "AXPick"
+      ],
+      "depth": 5,
+      "element_index": 151,
+      "element_token": "s00000044:151",
+      "enabled": true,
+      "label": "Sesizare-incident-rutier-01-09-2026.pdf",
+      "parent_index": 114,
+      "role": "AXMenuItem",
+      "selected": false
+    },
+    {
+      "actions": [
+        "AXCancel",
+        "AXPress",
+        "AXPick"
+      ],
+      "depth": 5,
+      "element_index": 152,
+      "element_token": "s00000044:152",
+      "enabled": true,
+      "label": "Show “Sesizare-incident-rutier-01-09-2026.pdf” in Finder",
+      "parent_index": 114,
+      "role": "AXMenuItem",
+      "selected": false
+    },
+    {
+      "actions": [
+        "AXCancel",
+        "AXPress",
+        "AXPick"
+      ],
+      "depth": 5,
+      "element_index": 153,
+      "element_token": "s00000044:153",
+      "enabled": true,
+      "label": "truecount.xcodeproj",
+      "parent_index": 114,
+      "role": "AXMenuItem",
+      "selected": false
+    },
+    {
+      "actions": [
+        "AXCancel",
+        "AXPress",
+        "AXPick"
+      ],
+      "depth": 5,
+      "element_index": 154,
+      "element_token": "s00000044:154",
+      "enabled": true,
+      "label": "Show “truecount.xcodeproj” in Finder",
+      "parent_index": 114,
+      "role": "AXMenuItem",
+      "selected": false
+    },
+    {
+      "actions": [
+        "AXCancel",
+        "AXPress",
+        "AXPick"
+      ],
+      "depth": 5,
+      "element_index": 155,
+      "element_token": "s00000044:155",
+      "enabled": true,
+      "label": "Macintosh HD",
+      "parent_index": 114,
+      "role": "AXMenuItem",
+      "selected": false
+    },
+    {
+      "actions": [
+        "AXCancel",
+        "AXPress",
+        "AXPick"
+      ],
+      "depth": 5,
+      "element_index": 156,
+      "element_token": "s00000044:156",
+      "enabled": true,
+      "label": "Clear Menu",
+      "parent_index": 114,
+      "role": "AXMenuItem",
+      "selected": false
+    },
+    {
+      "actions": [
+        "AXCancel",
+        "AXPress",
+        "AXPick"
+      ],
+      "depth": 3,
+      "element_index": 157,
+      "element_token": "s00000044:157",
+      "enabled": true,
+      "label": "Force Quit…",
+      "parent_index": 108,
+      "role": "AXMenuItem",
+      "selected": false
+    },
+    {
+      "actions": [
+        "AXCancel",
+        "AXPress",
+        "AXPick"
+      ],
+      "depth": 3,
+      "element_index": 158,
+      "element_token": "s00000044:158",
+      "enabled": true,
+      "label": "Force Quit System Settings",
+      "parent_index": 108,
+      "role": "AXMenuItem",
+      "selected": false
+    },
+    {
+      "actions": [
+        "AXCancel",
+        "AXPress",
+        "AXPick"
+      ],
+      "depth": 3,
+      "element_index": 159,
+      "element_token": "s00000044:159",
+      "enabled": true,
+      "label": "Sleep",
+      "parent_index": 108,
+      "role": "AXMenuItem",
+      "selected": false
+    },
+    {
+      "actions": [
+        "AXCancel",
+        "AXPress",
+        "AXPick"
+      ],
+      "depth": 3,
+      "element_index": 160,
+      "element_token": "s00000044:160",
+      "enabled": true,
+      "label": "Restart…",
+      "parent_index": 108,
+      "role": "AXMenuItem",
+      "selected": false
+    },
+    {
+      "actions": [
+        "AXCancel",
+        "AXPress",
+        "AXPick"
+      ],
+      "depth": 3,
+      "element_index": 161,
+      "element_token": "s00000044:161",
+      "enabled": true,
+      "label": "Restart",
+      "parent_index": 108,
+      "role": "AXMenuItem",
+      "selected": false
+    },
+    {
+      "actions": [
+        "AXCancel",
+        "AXPress",
+        "AXPick"
+      ],
+      "depth": 3,
+      "element_index": 162,
+      "element_token": "s00000044:162",
+      "enabled": true,
+      "label": "Shut Down…",
+      "parent_index": 108,
+      "role": "AXMenuItem",
+      "selected": false
+    },
+    {
+      "actions": [
+        "AXCancel",
+        "AXPress",
+        "AXPick"
+      ],
+      "depth": 3,
+      "element_index": 163,
+      "element_token": "s00000044:163",
+      "enabled": true,
+      "label": "Shut Down",
+      "parent_index": 108,
+      "role": "AXMenuItem",
+      "selected": false
+    },
+    {
+      "actions": [
+        "AXCancel",
+        "AXPress",
+        "AXPick"
+      ],
+      "depth": 3,
+      "element_index": 164,
+      "element_token": "s00000044:164",
+      "enabled": true,
+      "label": "Lock Screen",
+      "parent_index": 108,
+      "role": "AXMenuItem",
+      "selected": false
+    },
+    {
+      "actions": [
+        "AXCancel",
+        "AXPress",
+        "AXPick"
+      ],
+      "depth": 3,
+      "element_index": 165,
+      "element_token": "s00000044:165",
+      "enabled": true,
+      "label": "Log Out Alex Bejan…",
+      "parent_index": 108,
+      "role": "AXMenuItem",
+      "selected": false
+    },
+    {
+      "actions": [
+        "AXCancel",
+        "AXPress",
+        "AXPick"
+      ],
+      "depth": 3,
+      "element_index": 166,
+      "element_token": "s00000044:166",
+      "enabled": true,
+      "label": "Log Out Alex Bejan",
+      "parent_index": 108,
+      "role": "AXMenuItem",
+      "selected": false
+    },
+    {
+      "actions": [
+        "AXCancel",
+        "AXPress",
+        "AXPick"
+      ],
+      "depth": 1,
+      "element_index": 167,
+      "element_token": "s00000044:167",
+      "enabled": true,
+      "frame": {
+        "h": 30.0,
+        "w": 127.0,
+        "x": 43.0,
+        "y": 0.0
+      },
+      "label": "System Settings",
+      "parent_index": 106,
+      "role": "AXMenuBarItem",
+      "selected": false
+    },
+    {
+      "actions": [
+        "AXCancel"
+      ],
+      "depth": 2,
+      "element_index": 168,
+      "element_token": "s00000044:168",
+      "enabled": true,
+      "parent_index": 167,
+      "role": "AXMenu",
+      "selected": false
+    },
+    {
+      "actions": [
+        "AXCancel",
+        "AXPress",
+        "AXPick"
+      ],
+      "depth": 3,
+      "element_index": 169,
+      "element_token": "s00000044:169",
+      "enabled": true,
+      "label": "About System Settings",
+      "parent_index": 168,
+      "role": "AXMenuItem",
+      "selected": false
+    },
+    {
+      "actions": [
+        "AXCancel",
+        "AXPress",
+        "AXPick"
+      ],
+      "depth": 3,
+      "element_index": 170,
+      "element_token": "s00000044:170",
+      "enabled": true,
+      "label": "Services",
+      "parent_index": 168,
+      "role": "AXMenuItem",
+      "selected": false
+    },
+    {
+      "actions": [
+        "AXCancel"
+      ],
+      "depth": 4,
+      "element_index": 171,
+      "element_token": "s00000044:171",
+      "enabled": true,
+      "parent_index": 170,
+      "role": "AXMenu",
+      "selected": false
+    },
+    {
+      "actions": [
+        "AXCancel",
+        "AXPress",
+        "AXPick"
+      ],
+      "depth": 5,
+      "element_index": 172,
+      "element_token": "s00000044:172",
+      "enabled": true,
+      "label": "Activity Monitor",
+      "parent_index": 171,
+      "role": "AXMenuItem",
+      "selected": false
+    },
+    {
+      "actions": [
+        "AXCancel",
+        "AXPress",
+        "AXPick"
+      ],
+      "depth": 5,
+      "element_index": 173,
+      "element_token": "s00000044:173",
+      "enabled": true,
+      "label": "Allocations & Leaks",
+      "parent_index": 171,
+      "role": "AXMenuItem",
+      "selected": false
+    },
+    {
+      "actions": [
+        "AXCancel",
+        "AXPress",
+        "AXPick"
+      ],
+      "depth": 5,
+      "element_index": 174,
+      "element_token": "s00000044:174",
+      "enabled": true,
+      "label": "File Activity",
+      "parent_index": 171,
+      "role": "AXMenuItem",
+      "selected": false
+    },
+    {
+      "actions": [
+        "AXCancel",
+        "AXPress",
+        "AXPick"
+      ],
+      "depth": 5,
+      "element_index": 175,
+      "element_token": "s00000044:175",
+      "enabled": true,
+      "label": "System Trace",
+      "parent_index": 171,
+      "role": "AXMenuItem",
+      "selected": false
+    },
+    {
+      "actions": [
+        "AXCancel",
+        "AXPress",
+        "AXPick"
+      ],
+      "depth": 5,
+      "element_index": 176,
+      "element_token": "s00000044:176",
+      "enabled": true,
+      "label": "Time Profile Active Application",
+      "parent_index": 171,
+      "role": "AXMenuItem",
+      "selected": false
+    },
+    {
+      "actions": [
+        "AXCancel",
+        "AXPress",
+        "AXPick"
+      ],
+      "depth": 5,
+      "element_index": 177,
+      "element_token": "s00000044:177",
+      "enabled": true,
+      "label": "Time Profile App Under Mouse",
+      "parent_index": 171,
+      "role": "AXMenuItem",
+      "selected": false
+    },
+    {
+      "actions": [
+        "AXCancel",
+        "AXPress",
+        "AXPick"
+      ],
+      "depth": 5,
+      "element_index": 178,
+      "element_token": "s00000044:178",
+      "enabled": true,
+      "label": "Time Profile Entire System",
+      "parent_index": 171,
+      "role": "AXMenuItem",
+      "selected": false
+    },
+    {
+      "actions": [
+        "AXCancel",
+        "AXPress",
+        "AXPick"
+      ],
+      "depth": 5,
+      "element_index": 179,
+      "element_token": "s00000044:179",
+      "enabled": true,
+      "label": "Toggle Instruments Recording",
+      "parent_index": 171,
+      "role": "AXMenuItem",
+      "selected": false
+    },
+    {
+      "actions": [
+        "AXCancel",
+        "AXPress",
+        "AXPick"
+      ],
+      "depth": 5,
+      "element_index": 180,
+      "element_token": "s00000044:180",
+      "enabled": true,
+      "label": "Ask Claude",
+      "parent_index": 171,
+      "role": "AXMenuItem",
+      "selected": false
+    },
+    {
+      "actions": [
+        "AXCancel",
+        "AXPress",
+        "AXPick"
+      ],
+      "depth": 5,
+      "element_index": 181,
+      "element_token": "s00000044:181",
+      "enabled": true,
+      "label": "New Claude Code Session Here",
+      "parent_index": 171,
+      "role": "AXMenuItem",
+      "selected": false
+    },
+    {
+      "actions": [
+        "AXCancel",
+        "AXPress",
+        "AXPick"
+      ],
+      "depth": 5,
+      "element_index": 182,
+      "element_token": "s00000044:182",
+      "enabled": true,
+      "label": "Send to Claude",
+      "parent_index": 171,
+      "role": "AXMenuItem",
+      "selected": false
+    },
+    {
+      "actions": [
+        "AXCancel",
+        "AXPress",
+        "AXPick"
+      ],
+      "depth": 5,
+      "element_index": 183,
+      "element_token": "s00000044:183",
+      "enabled": true,
+      "label": "Services Settings…",
+      "parent_index": 171,
+      "role": "AXMenuItem",
+      "selected": false
+    },
+    {
+      "actions": [
+        "AXCancel",
+        "AXPress",
+        "AXPick"
+      ],
+      "depth": 3,
+      "element_index": 184,
+      "element_token": "s00000044:184",
+      "enabled": true,
+      "label": "Hide System Settings",
+      "parent_index": 168,
+      "role": "AXMenuItem",
+      "selected": false
+    },
+    {
+      "actions": [
+        "AXCancel",
+        "AXPress",
+        "AXPick"
+      ],
+      "depth": 3,
+      "element_index": 185,
+      "element_token": "s00000044:185",
+      "enabled": true,
+      "label": "Hide Others",
+      "parent_index": 168,
+      "role": "AXMenuItem",
+      "selected": false
+    },
+    {
+      "actions": [
+        "AXCancel",
+        "AXPress",
+        "AXPick"
+      ],
+      "depth": 3,
+      "element_index": 186,
+      "element_token": "s00000044:186",
+      "enabled": true,
+      "label": "Quit System Settings",
+      "parent_index": 168,
+      "role": "AXMenuItem",
+      "selected": false
+    },
+    {
+      "actions": [
+        "AXCancel",
+        "AXPress",
+        "AXPick"
+      ],
+      "depth": 1,
+      "element_index": 187,
+      "element_token": "s00000044:187",
+      "enabled": true,
+      "frame": {
+        "h": 30.0,
+        "w": 44.0,
+        "x": 169.0,
+        "y": 0.0
+      },
+      "label": "Edit",
+      "parent_index": 106,
+      "role": "AXMenuBarItem",
+      "selected": false
+    },
+    {
+      "actions": [
+        "AXCancel"
+      ],
+      "depth": 2,
+      "element_index": 188,
+      "element_token": "s00000044:188",
+      "enabled": true,
+      "parent_index": 187,
+      "role": "AXMenu",
+      "selected": false
+    },
+    {
+      "actions": [
+        "AXCancel",
+        "AXPress",
+        "AXPick"
+      ],
+      "depth": 3,
+      "element_index": 189,
+      "element_token": "s00000044:189",
+      "enabled": true,
+      "label": "Writing Tools",
+      "parent_index": 188,
+      "role": "AXMenuItem",
+      "selected": false
+    },
+    {
+      "actions": [
+        "AXCancel"
+      ],
+      "depth": 4,
+      "element_index": 190,
+      "element_token": "s00000044:190",
+      "enabled": true,
+      "parent_index": 189,
+      "role": "AXMenu",
+      "selected": false
+    },
+    {
+      "actions": [
+        "AXCancel",
+        "AXPress",
+        "AXPick"
+      ],
+      "depth": 3,
+      "element_index": 191,
+      "element_token": "s00000044:191",
+      "enabled": true,
+      "label": "AutoFill",
+      "parent_index": 188,
+      "role": "AXMenuItem",
+      "selected": false
+    },
+    {
+      "actions": [
+        "AXCancel"
+      ],
+      "depth": 4,
+      "element_index": 192,
+      "element_token": "s00000044:192",
+      "enabled": true,
+      "parent_index": 191,
+      "role": "AXMenu",
+      "selected": false
+    },
+    {
+      "actions": [
+        "AXCancel",
+        "AXPress",
+        "AXPick"
+      ],
+      "depth": 3,
+      "element_index": 193,
+      "element_token": "s00000044:193",
+      "enabled": true,
+      "label": "Start Dictation…",
+      "parent_index": 188,
+      "role": "AXMenuItem",
+      "selected": false
+    },
+    {
+      "actions": [
+        "AXCancel",
+        "AXPress",
+        "AXPick"
+      ],
+      "depth": 3,
+      "element_index": 194,
+      "element_token": "s00000044:194",
+      "enabled": true,
+      "label": "Emoji & Symbols",
+      "parent_index": 188,
+      "role": "AXMenuItem",
+      "selected": false
+    },
+    {
+      "actions": [
+        "AXCancel",
+        "AXPress",
+        "AXPick"
+      ],
+      "depth": 1,
+      "element_index": 195,
+      "element_token": "s00000044:195",
+      "enabled": true,
+      "frame": {
+        "h": 30.0,
+        "w": 51.0,
+        "x": 212.0,
+        "y": 0.0
+      },
+      "label": "View",
+      "parent_index": 106,
+      "role": "AXMenuBarItem",
+      "selected": false
+    },
+    {
+      "actions": [
+        "AXCancel"
+      ],
+      "depth": 2,
+      "element_index": 196,
+      "element_token": "s00000044:196",
+      "enabled": true,
+      "parent_index": 195,
+      "role": "AXMenu",
+      "selected": false
+    },
+    {
+      "actions": [
+        "AXCancel",
+        "AXPress",
+        "AXPick"
+      ],
+      "depth": 3,
+      "element_index": 197,
+      "element_token": "s00000044:197",
+      "enabled": true,
+      "label": "Back",
+      "parent_index": 196,
+      "role": "AXMenuItem",
+      "selected": false
+    },
+    {
+      "actions": [
+        "AXCancel",
+        "AXPress",
+        "AXPick"
+      ],
+      "depth": 3,
+      "element_index": 198,
+      "element_token": "s00000044:198",
+      "enabled": true,
+      "label": "Search",
+      "parent_index": 196,
+      "role": "AXMenuItem",
+      "selected": false
+    },
+    {
+      "actions": [
+        "AXCancel",
+        "AXPress",
+        "AXPick"
+      ],
+      "depth": 1,
+      "element_index": 199,
+      "element_token": "s00000044:199",
+      "enabled": true,
+      "frame": {
+        "h": 30.0,
+        "w": 69.0,
+        "x": 262.0,
+        "y": 0.0
+      },
+      "label": "Window",
+      "parent_index": 106,
+      "role": "AXMenuBarItem",
+      "selected": false
+    },
+    {
+      "actions": [
+        "AXCancel"
+      ],
+      "depth": 2,
+      "element_index": 200,
+      "element_token": "s00000044:200",
+      "enabled": true,
+      "parent_index": 199,
+      "role": "AXMenu",
+      "selected": false
+    },
+    {
+      "actions": [
+        "AXCancel",
+        "AXPress",
+        "AXPick"
+      ],
+      "depth": 3,
+      "element_index": 201,
+      "element_token": "s00000044:201",
+      "enabled": true,
+      "label": "Close All",
+      "parent_index": 200,
+      "role": "AXMenuItem",
+      "selected": false
+    },
+    {
+      "actions": [
+        "AXCancel",
+        "AXPress",
+        "AXPick"
+      ],
+      "depth": 3,
+      "element_index": 202,
+      "element_token": "s00000044:202",
+      "enabled": true,
+      "label": "Minimize All",
+      "parent_index": 200,
+      "role": "AXMenuItem",
+      "selected": false
+    },
+    {
+      "actions": [
+        "AXCancel",
+        "AXPress",
+        "AXPick"
+      ],
+      "depth": 3,
+      "element_index": 203,
+      "element_token": "s00000044:203",
+      "enabled": true,
+      "label": "Zoom All",
+      "parent_index": 200,
+      "role": "AXMenuItem",
+      "selected": false
+    },
+    {
+      "actions": [
+        "AXCancel",
+        "AXPress",
+        "AXPick"
+      ],
+      "depth": 3,
+      "element_index": 204,
+      "element_token": "s00000044:204",
+      "enabled": true,
+      "label": "Move & Resize",
+      "parent_index": 200,
+      "role": "AXMenuItem",
+      "selected": false
+    },
+    {
+      "actions": [
+        "AXCancel"
+      ],
+      "depth": 4,
+      "element_index": 205,
+      "element_token": "s00000044:205",
+      "enabled": true,
+      "parent_index": 204,
+      "role": "AXMenu",
+      "selected": false
+    },
+    {
+      "actions": [
+        "AXCancel",
+        "AXPress",
+        "AXPick"
+      ],
+      "depth": 3,
+      "element_index": 206,
+      "element_token": "s00000044:206",
+      "enabled": true,
+      "label": "Bring All to Front",
+      "parent_index": 200,
+      "role": "AXMenuItem",
+      "selected": false
+    },
+    {
+      "actions": [
+        "AXCancel",
+        "AXPress",
+        "AXPick"
+      ],
+      "depth": 3,
+      "element_index": 207,
+      "element_token": "s00000044:207",
+      "enabled": true,
+      "label": "Arrange in Front",
+      "parent_index": 200,
+      "role": "AXMenuItem",
+      "selected": false
+    },
+    {
+      "actions": [
+        "AXCancel",
+        "AXPress",
+        "AXPick"
+      ],
+      "depth": 1,
+      "element_index": 208,
+      "element_token": "s00000044:208",
+      "enabled": true,
+      "frame": {
+        "h": 30.0,
+        "w": 49.0,
+        "x": 330.0,
+        "y": 0.0
+      },
+      "label": "Help",
+      "parent_index": 106,
+      "role": "AXMenuBarItem",
+      "selected": false
+    },
+    {
+      "actions": [
+        "AXCancel"
+      ],
+      "depth": 2,
+      "element_index": 209,
+      "element_token": "s00000044:209",
+      "enabled": true,
+      "parent_index": 208,
+      "role": "AXMenu",
+      "selected": false
+    },
+    {
+      "actions": [
+        "AXCancel",
+        "AXPress",
+        "AXPick"
+      ],
+      "depth": 3,
+      "element_index": 210,
+      "element_token": "s00000044:210",
+      "enabled": true,
+      "label": "System Settings Help",
+      "parent_index": 209,
+      "role": "AXMenuItem",
+      "selected": false
+    },
+    {
+      "actions": [
+        "AXCancel",
+        "AXPress",
+        "AXPick"
+      ],
+      "depth": 3,
+      "element_index": 211,
+      "element_token": "s00000044:211",
+      "enabled": true,
+      "label": "Mac User Guide",
+      "parent_index": 209,
+      "role": "AXMenuItem",
+      "selected": false
+    },
+    {
+      "actions": [
+        "AXCancel",
+        "AXPress",
+        "AXPick"
+      ],
+      "depth": 3,
+      "element_index": 212,
+      "element_token": "s00000044:212",
+      "enabled": true,
+      "label": "User Manual",
+      "parent_index": 209,
+      "role": "AXMenuItem",
+      "selected": false
+    },
+    {
+      "actions": [
+        "AXCancel",
+        "AXPress",
+        "AXPick"
+      ],
+      "depth": 3,
+      "element_index": 213,
+      "element_token": "s00000044:213",
+      "enabled": true,
+      "label": "macOS Support",
+      "parent_index": 209,
+      "role": "AXMenuItem",
+      "selected": false
+    },
+    {
+      "actions": [
+        "AXCancel",
+        "AXPress",
+        "AXPick"
+      ],
+      "depth": 3,
+      "element_index": 214,
+      "element_token": "s00000044:214",
+      "enabled": true,
+      "label": "Mac mini Specifications",
+      "parent_index": 209,
+      "role": "AXMenuItem",
+      "selected": false
+    },
+    {
+      "actions": [
+        "AXCancel",
+        "AXPress",
+        "AXPick"
+      ],
+      "depth": 3,
+      "element_index": 215,
+      "element_token": "s00000044:215",
+      "enabled": true,
+      "label": "Hardware Support",
+      "parent_index": 209,
+      "role": "AXMenuItem",
+      "selected": false
+    }
+  ],
+  "elements_complete": false,
+  "pid": 7466,
+  "returned_element_count": 216,
+  "snapshot_id": "s00000044",
+  "total_element_count": 216,
+  "tree_markdown": "- [0] AXWindow \"Screen & System Audio Recording\" [id=Main actions=[raise]]\n    - [1] AXOutline (Sidebar) [id=com.apple.settings.sidebar.collectionView actions=[showmenu]]\n      - [2] AXRow [actions=[showdefaultui,showalternateui]]\n      - [3] AXRow [actions=[showdefaultui,showalternateui]]\n          - [4] AXButton (Alexandru Bejan, Apple Account) [id=com.apple.systempreferences.AppleIDSettings*AppleIDSettings actions=[press]]\n      - [5] AXRow [actions=[showdefaultui,showalternateui]]\n          - [6] AXButton (Family) [id=com.apple.settings.family actions=[press]]\n      - [7] AXRow [actions=[showdefaultui,showalternateui]]\n      - [8] AXRow [actions=[showdefaultui,showalternateui]]\n          - [9] AXButton = \"1\" (Software Update Available) [id=com.apple.settings.followUpItemDirectLoadSystemSettingsExtension.FOLLOWUP_SINGLE_ACTION_com.apple.SoftwareUpdateServices.followup:com.apple.Software-Update-Settings.extension.com.apple.Software-Update-Settings.extension actions=[press]]\n      - [10] AXRow [actions=[showdefaultui,showalternateui]]\n      - [11] AXRow [actions=[showdefaultui,showalternateui]]\n          - [12] AXButton (Wi-Fi) [id=com.apple.settings.wifi actions=[press]]\n      - [13] AXRow [actions=[showdefaultui,showalternateui]]\n          - [14] AXButton (Bluetooth) [id=com.apple.settings.bluetooth actions=[press]]\n      - [15] AXRow [actions=[showdefaultui,showalternateui]]\n          - [16] AXButton (Network) [id=com.apple.settings.network actions=[press]]\n      - [17] AXRow [actions=[showdefaultui,showalternateui]]\n          - [18] AXButton (VPN) [id=com.apple.settings.vpn actions=[press]]\n      - [19] AXRow [actions=[showdefaultui,showalternateui]]\n          - [20] AXButton (Energy) [id=com.apple.settings.battery actions=[press]]\n      - [21] AXRow [actions=[showdefaultui,showalternateui]]\n      - [22] AXRow [actions=[showdefaultui,showalternateui]]\n          - [23] AXButton (General) [id=com.apple.settings.general actions=[press]]\n      - [24] AXRow [actions=[showdefaultui,showalternateui]]\n          - [25] AXButton (Accessibility) [id=com.apple.settings.accessibility actions=[press]]\n      - [26] AXRow [actions=[showdefaultui,showalternateui]]\n          - [27] AXButton (Appearance) [id=com.apple.settings.appearance actions=[press]]\n      - [28] AXRow [actions=[showdefaultui,showalternateui]]\n          - [29] AXButton (Desktop & Dock) [id=com.apple.settings.desktopAndDock actions=[press]]\n      - [30] AXRow [actions=[showdefaultui,showalternateui]]\n          - [31] AXButton (Displays) [id=com.apple.settings.displayAndBrightness actions=[press]]\n      - [32] AXRow [actions=[showdefaultui,showalternateui]]\n          - [33] AXButton (Menu Bar) [id=com.apple.settings.controlCenter actions=[press]]\n      - [34] AXRow [actions=[showdefaultui,showalternateui]]\n          - [35] AXButton (Siri) [id=com.apple.settings.siri actions=[press]]\n      - [36] AXRow [actions=[showdefaultui,showalternateui]]\n          - [37] AXButton (Spotlight) [id=com.apple.settings.search actions=[press]]\n      - [38] AXRow [actions=[showdefaultui,showalternateui]]\n          - [39] AXButton (Wallpaper) [id=com.apple.settings.wallpaper actions=[press]]\n      - [40] AXRow [actions=[showdefaultui,showalternateui]]\n      - [41] AXRow [actions=[showdefaultui,showalternateui]]\n          - [42] AXButton (Notifications) [id=com.apple.settings.notifications actions=[press]]\n      - [43] AXRow [actions=[showdefaultui,showalternateui]]\n          - [44] AXButton (Sound) [id=com.apple.settings.sounds actions=[press]]\n      - [45] AXRow [actions=[showdefaultui,showalternateui]]\n          - [46] AXButton (Focus) [id=com.apple.settings.focus actions=[press]]\n      - [47] AXRow [actions=[showdefaultui,showalternateui]]\n          - [48] AXButton (Screen Time) [id=com.apple.settings.screenTime actions=[press]]\n      - [49] AXRow [actions=[showdefaultui,showalternateui]]\n      - [50] AXRow [actions=[showdefaultui,showalternateui]]\n          - [51] AXButton (Lock Screen) [id=com.apple.settings.lockScreen actions=[press]]\n      - [52] AXRow [actions=[showdefaultui,showalternateui]]\n          - [53] AXButton (Privacy & Security) [id=com.apple.settings.privacyAndSecurity actions=[press]]\n      - [54] AXRow [actions=[showdefaultui,showalternateui]]\n          - [55] AXButton (Touch ID & Password) [id=com.apple.settings.passcodeAndBiometrics actions=[press]]\n      - [56] AXRow [actions=[showdefaultui,showalternateui]]\n          - [57] AXButton (Users & Groups) [id=com.apple.settings.usersAndGroups actions=[press]]\n      - [58] AXRow [actions=[showdefaultui,showalternateui]]\n      - [59] AXRow [actions=[showdefaultui,showalternateui]]\n          - [60] AXButton (Game Center) [id=com.apple.settings.gameCenter actions=[press]]\n      - [61] AXRow [actions=[showdefaultui,showalternateui]]\n          - [62] AXButton (iCloud) [id=com.apple.settings.iCloud actions=[press]]\n      - [63] AXRow [actions=[showdefaultui,showalternateui]]\n          - [64] AXButton (Internet Accounts) [id=com.apple.settings.internetAccounts actions=[press]]\n      - [65] AXRow [actions=[showdefaultui,showalternateui]]\n          - [66] AXButton (Wallet & Apple Pay) [id=com.apple.settings.walletAndApplePay actions=[press]]\n      - [67] AXRow [actions=[showdefaultui,showalternateui]]\n      - [68] AXRow [actions=[showdefaultui,showalternateui]]\n          - [69] AXButton (Keyboard) [id=com.apple.settings.keyboard actions=[press]]\n      - [70] AXRow [actions=[showdefaultui,showalternateui]]\n          - [71] AXButton (Mouse) [id=com.apple.settings.mouse actions=[press]]\n      - [72] AXRow [actions=[showdefaultui,showalternateui]]\n          - [73] AXButton (Printers & Scanners) [id=com.apple.settings.printerAndScanner actions=[press]]\n      - [74] AXButton [actions=[press]]\n      - [75] AXButton [actions=[press]]\n      - [76] AXButton [actions=[press]]\n      - [77] AXButton [actions=[press]]\n    - [78] AXTextField = \"Search\" [actions=[showmenu,confirm]]\n      - [79] AXButton (Search) [actions=[press]]\n    - AXStaticText = \"Screen & System Audio Recording\"\n    - AXStaticText = \"Allow the applications below to record the content of your screen and audio, even while using other applications.\"\n      - [80] AXRow [actions=[showdefaultui,showalternateui]]\n          - AXStaticText = \"Claude\"\n          - [81] AXCheckBox [id=Claude_Toggle actions=[press,press,showmenu]]\n      - [82] AXRow [actions=[showdefaultui,showalternateui]]\n          - AXStaticText = \"CuaDriver\"\n          - [83] AXCheckBox [id=CuaDriver_Toggle actions=[press,press,showmenu]]\n      - [84] AXRow [actions=[showdefaultui,showalternateui]]\n          - AXStaticText = \"Gemini\"\n          - [85] AXCheckBox [id=Gemini_Toggle actions=[press,press,showmenu]]\n      - [86] AXRow [actions=[showdefaultui,showalternateui]]\n          - AXStaticText = \"Google Chrome\"\n          - [87] AXCheckBox [id=Google Chrome_Toggle actions=[press,press,showmenu]]\n      - [88] AXRow [actions=[showdefaultui,showalternateui]]\n          - AXStaticText = \"Google Chrome.app.bundle\"\n          - [89] AXCheckBox [id=Google Chrome.app.bundle_Toggle actions=[press,press,showmenu]]\n      - [90] AXRow [actions=[showdefaultui,showalternateui]]\n          - AXStaticText = \"node\"\n          - [91] AXCheckBox [id=node_Toggle actions=[press,press,showmenu]]\n      - [92] AXRow [actions=[showdefaultui,showalternateui]]\n          - AXStaticText = \"Superset\"\n          - [93] AXCheckBox [id=Superset_Toggle actions=[press,press,showmenu]]\n      - [94] AXRow [actions=[showdefaultui,showalternateui]]\n          - AXStaticText = \"Terminal\"\n          - [95] AXCheckBox [id=Terminal_Toggle actions=[press,press,showmenu]]\n    - [96] AXButton (Add) [actions=[press]]\n    - AXButton (Remove)\n    - AXStaticText = \"System Audio Recording Only\"\n    - AXStaticText = \"Allow the applications below to access and record your system audio.\"\n      - [97] AXRow [actions=[showdefaultui,showalternateui]]\n          - AXStaticText = \"Gemini\"\n          - [98] AXCheckBox [id=Gemini_Toggle actions=[press,press,showmenu]]\n    - [99] AXButton (Add) [actions=[press]]\n    - AXButton (Remove)\n  - [100] AXToolbar [actions=[showmenu]]\n    - [101] AXButton (Go Back) [id=chevron.backward help=\"Go Back\" actions=[press,showmenu]]\n    - AXMenuButton (Go Forward)\n  - [102] AXButton [actions=[press]]\n  - [103] AXButton [actions=[press,showmenu]]\n  - [104] AXButton [actions=[press]]\n  - [105] AXStaticText = \"Screen & System Audio Recording\" [actions=[press]]\n- [106] AXMenuBar [actions=[cancel]]\n  - [107] AXMenuBarItem \"Apple\" [actions=[cancel,press,pick]]\n    - [108] AXMenu [actions=[cancel]]\n      - [109] AXMenuItem \"About This Mac\" [id=_aboutThisMacRequested: actions=[cancel,press,pick]]\n      - [110] AXMenuItem \"System Information\" [id=_systemInformationRequested: actions=[cancel,press,pick]]\n      - [111] AXMenuItem \"System Settings…, 1 update\" [id=_systemSettingsRequested: actions=[cancel,press,pick]]\n      - [112] AXMenuItem \"App Store\" [id=_appStoreRequested: actions=[cancel,press,pick]]\n      - [113] AXMenuItem \"Recent Items\" [id=_recentsRequested: actions=[cancel,press,pick]]\n        - [114] AXMenu [actions=[cancel]]\n          - AXMenuItem \"Applications\"\n          - [115] AXMenuItem \"App Store\" [id=_recentItemRequested: actions=[cancel,press,pick]]\n          - [116] AXMenuItem \"Show “App Store” in Finder\" [id=_recentItemRequested: actions=[cancel,press,pick]]\n          - [117] AXMenuItem \"Claude\" [id=_recentItemRequested: actions=[cancel,press,pick]]\n          - [118] AXMenuItem \"Show “Claude” in Finder\" [id=_recentItemRequested: actions=[cancel,press,pick]]\n          - [119] AXMenuItem \"Device Hub\" [id=_recentItemRequested: actions=[cancel,press,pick]]\n          - [120] AXMenuItem \"Show “Device Hub” in Finder\" [id=_recentItemRequested: actions=[cancel,press,pick]]\n          - [121] AXMenuItem \"Finder\" [id=_recentItemRequested: actions=[cancel,press,pick]]\n          - [122] AXMenuItem \"Show “Finder” in Finder\" [id=_recentItemRequested: actions=[cancel,press,pick]]\n          - [123] AXMenuItem \"Messages\" [id=_recentItemRequested: actions=[cancel,press,pick]]\n          - [124] AXMenuItem \"Show “Messages” in Finder\" [id=_recentItemRequested: actions=[cancel,press,pick]]\n          - [125] AXMenuItem \"Passwords\" [id=_recentItemRequested: actions=[cancel,press,pick]]\n          - [126] AXMenuItem \"Show “Passwords” in Finder\" [id=_recentItemRequested: actions=[cancel,press,pick]]\n          - [127] AXMenuItem \"Phone\" [id=_recentItemRequested: actions=[cancel,press,pick]]\n          - [128] AXMenuItem \"Show “Phone” in Finder\" [id=_recentItemRequested: actions=[cancel,press,pick]]\n          - [129] AXMenuItem \"Safari\" [id=_recentItemRequested: actions=[cancel,press,pick]]\n          - [130] AXMenuItem \"Show “Safari” in Finder\" [id=_recentItemRequested: actions=[cancel,press,pick]]\n          - [131] AXMenuItem \"System Settings\" [id=_recentItemRequested: actions=[cancel,press,pick]]\n          - [132] AXMenuItem \"Show “System Settings” in Finder\" [id=_recentItemRequested: actions=[cancel,press,pick]]\n          - [133] AXMenuItem \"Xcode\" [id=_recentItemRequested: actions=[cancel,press,pick]]\n          - [134] AXMenuItem \"Show “Xcode” in Finder\" [id=_recentItemRequested: actions=[cancel,press,pick]]\n          - AXMenuItem \"Documents\"\n          - [135] AXMenuItem \"2025-06-02 -- 2025-06-09 Trib Weekly Report.pdf\" [id=_recentItemRequested: actions=[cancel,press,pick]]\n          - [136] AXMenuItem \"Show “2025-06-02 -- 2025-06-09 Trib Weekly Report.pdf” in Finder\" [id=_recentItemRequested: actions=[cancel,press,pick]]\n          - [137] AXMenuItem \"2025-06-09 -- 2025-06-16 Trib Weekly Report.pdf\" [id=_recentItemRequested: actions=[cancel,press,pick]]\n          - [138] AXMenuItem \"Show “2025-06-09 -- 2025-06-16 Trib Weekly Report.pdf” in Finder\" [id=_recentItemRequested: actions=[cancel,press,pick]]\n          - [139] AXMenuItem \"2026-02-02 -- 2026-02-09 Trib Weekly Report.pdf\" [id=_recentItemRequested: actions=[cancel,press,pick]]\n          - [140] AXMenuItem \"Show “2026-02-02 -- 2026-02-09 Trib Weekly Report.pdf” in Finder\" [id=_recentItemRequested: actions=[cancel,press,pick]]\n          - [141] AXMenuItem \"2026-03-16 -- 2026-03-23 Trib Weekly Report.pdf\" [id=_recentItemRequested: actions=[cancel,press,pick]]\n          - [142] AXMenuItem \"Show “2026-03-16 -- 2026-03-23 Trib Weekly Report.pdf” in Finder\" [id=_recentItemRequested: actions=[cancel,press,pick]]\n          - [143] AXMenuItem \"2026-03-23 -- 2026-03-30 Trib Weekly Report.pdf\" [id=_recentItemRequested: actions=[cancel,press,pick]]\n          - [144] AXMenuItem \"Show “2026-03-23 -- 2026-03-30 Trib Weekly Report.pdf” in Finder\" [id=_recentItemRequested: actions=[cancel,press,pick]]\n          - [145] AXMenuItem \"CLAUDE.md\" [id=_recentItemRequested: actions=[cancel,press,pick]]\n          - [146] AXMenuItem \"Show “CLAUDE.md” in Finder\" [id=_recentItemRequested: actions=[cancel,press,pick]]\n          - [147] AXMenuItem \"dd-amicii-documente.zip\" [id=_recentItemRequested: actions=[cancel,press,pick]]\n          - [148] AXMenuItem \"Show “dd-amicii-documente.zip” in Finder\" [id=_recentItemRequested: actions=[cancel,press,pick]]\n          - [149] AXMenuItem \"IMG_5678.HEIC\" [id=_recentItemRequested: actions=[cancel,press,pick]]\n          - [150] AXMenuItem \"Show “IMG_5678.HEIC” in Finder\" [id=_recentItemRequested: actions=[cancel,press,pick]]\n          - [151] AXMenuItem \"Sesizare-incident-rutier-01-09-2026.pdf\" [id=_recentItemRequested: actions=[cancel,press,pick]]\n          - [152] AXMenuItem \"Show “Sesizare-incident-rutier-01-09-2026.pdf” in Finder\" [id=_recentItemRequested: actions=[cancel,press,pick]]\n          - [153] AXMenuItem \"truecount.xcodeproj\" [id=_recentItemRequested: actions=[cancel,press,pick]]\n          - [154] AXMenuItem \"Show “truecount.xcodeproj” in Finder\" [id=_recentItemRequested: actions=[cancel,press,pick]]\n          - AXMenuItem \"Servers\"\n          - [155] AXMenuItem \"Macintosh HD\" [id=_recentItemRequested: actions=[cancel,press,pick]]\n          - [156] AXMenuItem \"Clear Menu\" [id=_clearRecentItemsRequested: actions=[cancel,press,pick]]\n      - [157] AXMenuItem \"Force Quit…\" [id=_forceQuitPanelRequested: actions=[cancel,press,pick]]\n      - [158] AXMenuItem \"Force Quit System Settings\" [id=_forceQuitRequested: actions=[cancel,press,pick]]\n      - [159] AXMenuItem \"Sleep\" [id=_sleepRequested: actions=[cancel,press,pick]]\n      - [160] AXMenuItem \"Restart…\" [id=_restartRequested: actions=[cancel,press,pick]]\n      - [161] AXMenuItem \"Restart\" [id=_restartNowRequested: actions=[cancel,press,pick]]\n      - [162] AXMenuItem \"Shut Down…\" [id=_shutDownRequested: actions=[cancel,press,pick]]\n      - [163] AXMenuItem \"Shut Down\" [id=_shutDownNowRequested: actions=[cancel,press,pick]]\n      - [164] AXMenuItem \"Lock Screen\" [id=_lockScreenRequested: actions=[cancel,press,pick]]\n      - [165] AXMenuItem \"Log Out Alex Bejan…\" [id=_logOutRequested: actions=[cancel,press,pick]]\n      - [166] AXMenuItem \"Log Out Alex Bejan\" [id=_logOutNowRequested: actions=[cancel,press,pick]]\n  - [167] AXMenuBarItem \"System Settings\" [actions=[cancel,press,pick]]\n    - [168] AXMenu [actions=[cancel]]\n      - [169] AXMenuItem \"About System Settings\" [id=orderFrontStandardAboutPanel: actions=[cancel,press,pick]]\n      - [170] AXMenuItem \"Services\" [actions=[cancel,press,pick]]\n        - [171] AXMenu [actions=[cancel]]\n          - [172] AXMenuItem \"Activity Monitor\" [id=_processRequest: actions=[cancel,press,pick]]\n          - [173] AXMenuItem \"Allocations & Leaks\" [id=_processRequest: actions=[cancel,press,pick]]\n          - [174] AXMenuItem \"File Activity\" [id=_processRequest: actions=[cancel,press,pick]]\n          - [175] AXMenuItem \"System Trace\" [id=_processRequest: actions=[cancel,press,pick]]\n          - [176] AXMenuItem \"Time Profile Active Application\" [id=_processRequest: actions=[cancel,press,pick]]\n          - [177] AXMenuItem \"Time Profile App Under Mouse\" [id=_processRequest: actions=[cancel,press,pick]]\n          - [178] AXMenuItem \"Time Profile Entire System\" [id=_processRequest: actions=[cancel,press,pick]]\n          - [179] AXMenuItem \"Toggle Instruments Recording\" [id=_processRequest: actions=[cancel,press,pick]]\n          - [180] AXMenuItem \"Ask Claude\" [id=_processRequest: actions=[cancel,press,pick]]\n          - [181] AXMenuItem \"New Claude Code Session Here\" [id=_processRequest: actions=[cancel,press,pick]]\n          - [182] AXMenuItem \"Send to Claude\" [id=_processRequest: actions=[cancel,press,pick]]\n          - [183] AXMenuItem \"Services Settings…\" [id=_configureServicesMenu: actions=[cancel,press,pick]]\n      - [184] AXMenuItem \"Hide System Settings\" [id=hide: actions=[cancel,press,pick]]\n      - [185] AXMenuItem \"Hide Others\" [id=hideOtherApplications: actions=[cancel,press,pick]]\n      - AXMenuItem \"Show All\"\n      - [186] AXMenuItem \"Quit System Settings\" [id=terminate: actions=[cancel,press,pick]]\n  - [187] AXMenuBarItem \"Edit\" [actions=[cancel,press,pick]]\n    - [188] AXMenu [actions=[cancel]]\n      - AXMenuItem \"Undo\"\n      - AXMenuItem \"Redo\"\n      - AXMenuItem \"Cut\"\n      - AXMenuItem \"Copy\"\n      - AXMenuItem \"Paste\"\n      - AXMenuItem \"Delete\"\n      - AXMenuItem \"Select All\"\n      - [189] AXMenuItem \"Writing Tools\" [id=__NSTextViewContextSubmenuIdentifierWritingTools actions=[cancel,press,pick]]\n        - [190] AXMenu [actions=[cancel]]\n          - AXMenuItem \"Show Writing Tools\"\n          - AXMenuItem \"Proofread\"\n          - AXMenuItem \"Rewrite\"\n          - AXMenuItem \"Make Friendly\"\n          - AXMenuItem \"Make Professional\"\n          - AXMenuItem \"Make Concise\"\n          - AXMenuItem \"Summarize\"\n          - AXMenuItem \"Create Key Points\"\n          - AXMenuItem \"Make List\"\n          - AXMenuItem \"Make Table\"\n          - AXMenuItem \"Compose…\"\n      - [191] AXMenuItem \"AutoFill\" [id=_NSMenuItemAutoFillIdentifier actions=[cancel,press,pick]]\n        - [192] AXMenu [actions=[cancel]]\n          - AXMenuItem \"Contact…\"\n          - AXMenuItem \"Passwords…\"\n          - AXMenuItem \"Credit Card…\"\n      - [193] AXMenuItem \"Start Dictation…\" [id=startDictation: actions=[cancel,press,pick]]\n      - [194] AXMenuItem \"Emoji & Symbols\" [id=orderFrontCharacterPalette: actions=[cancel,press,pick]]\n  - [195] AXMenuBarItem \"View\" [actions=[cancel,press,pick]]\n    - [196] AXMenu [actions=[cancel]]\n      - [197] AXMenuItem \"Back\" [id=menuAction: actions=[cancel,press,pick]]\n      - AXMenuItem \"Forward\"\n      - [198] AXMenuItem \"Search\" [id=menuAction: actions=[cancel,press,pick]]\n      - AXMenuItem \"Enter Full Screen\"\n  - [199] AXMenuBarItem \"Window\" [actions=[cancel,press,pick]]\n    - [200] AXMenu [actions=[cancel]]\n      - AXMenuItem \"Close\"\n      - [201] AXMenuItem \"Close All\" [id=closeAll: actions=[cancel,press,pick]]\n      - AXMenuItem \"Minimize\"\n      - [202] AXMenuItem \"Minimize All\" [id=miniaturizeAll: actions=[cancel,press,pick]]\n      - AXMenuItem \"Zoom\"\n      - [203] AXMenuItem \"Zoom All\" [id=zoomAll: actions=[cancel,press,pick]]\n      - AXMenuItem \"Fill\"\n      - AXMenuItem \"Center\"\n      - [204] AXMenuItem \"Move & Resize\" [actions=[cancel,press,pick]]\n        - [205] AXMenu [actions=[cancel]]\n          - AXMenuItem \"Halves\"\n          - AXMenuItem \"Left\"\n          - AXMenuItem \"Right\"\n          - AXMenuItem \"Top\"\n          - AXMenuItem \"Bottom\"\n          - AXMenuItem \"Quarters\"\n          - AXMenuItem \"Top Left\"\n          - AXMenuItem \"Top Right\"\n          - AXMenuItem \"Bottom Left\"\n          - AXMenuItem \"Bottom Right\"\n          - AXMenuItem \"Arrange\"\n          - AXMenuItem \"Left & Right\"\n          - AXMenuItem \"Left & Quarters\"\n          - AXMenuItem \"Right & Left\"\n          - AXMenuItem \"Right & Quarters\"\n          - AXMenuItem \"Top & Bottom\"\n          - AXMenuItem \"Top & Quarters\"\n          - AXMenuItem \"Bottom & Top\"\n          - AXMenuItem \"Bottom & Quarters\"\n          - AXMenuItem \"Quarters\"\n          - AXMenuItem \"Return to Previous Size\"\n      - AXMenuItem \"Full Screen Tile\"\n      - [206] AXMenuItem \"Bring All to Front\" [id=arrangeInFront: actions=[cancel,press,pick]]\n      - [207] AXMenuItem \"Arrange in Front\" [id=alternateArrangeInFront: actions=[cancel,press,pick]]\n      - AXMenuItem \"Remove Window from Set\"\n  - [208] AXMenuBarItem \"Help\" [actions=[cancel,press,pick]]\n    - [209] AXMenu [actions=[cancel]]\n      - [210] AXMenuItem \"System Settings Help\" [id=showHelp: actions=[cancel,press,pick]]\n      - [211] AXMenuItem \"Mac User Guide\" [id=menuAction: actions=[cancel,press,pick]]\n      - [212] AXMenuItem \"User Manual\" [id=menuAction: actions=[cancel,press,pick]]\n      - [213] AXMenuItem \"macOS Support\" [id=menuAction: actions=[cancel,press,pick]]\n      - [214] AXMenuItem \"Mac mini Specifications\" [id=menuAction: actions=[cancel,press,pick]]\n      - [215] AXMenuItem \"Hardware Support\" [id=menuAction: actions=[cancel,press,pick]]\n",
+  "window_id": 482,
+  "window_title": "Screen & System Audio Recording"
+}
