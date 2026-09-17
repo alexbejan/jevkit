@@ -26,13 +26,17 @@ t_all = time.monotonic()
 for name, spec in cases.items():
     if name.startswith("_"):
         continue
-    f = snaps / f"{name}.json"
-    if not f.exists():
-        print("missing snapshot", f)
-        continue
-    st = json.loads(f.read_text())["state"]
-    cands = compact.cua_elements(st["elements"], tree_markdown=st.get("tree_markdown"))
-    meta = {k: st.get(k) for k in ("window_title", "elements_complete", "element_count", "total_element_count")}
+    if "inline" in spec:            # synthetic screen: a list of "[id] line" strings
+        cands = [{"id": l.split("]")[0][1:], "line": l, "interactive": True} for l in spec["inline"]]
+        meta = {"window_title": spec.get("title")}
+    else:
+        f = snaps / f"{name}.json"
+        if not f.exists():
+            print("missing snapshot", f)
+            continue
+        st = json.loads(f.read_text())["state"]
+        cands = compact.cua_elements(st["elements"], tree_markdown=st.get("tree_markdown"))
+        meta = {k: st.get(k) for k in ("window_title", "elements_complete", "element_count", "total_element_count")}
     for c in spec.get("pick", []):
         t0 = time.monotonic()
         r = j.pick(c["target"], cands)
