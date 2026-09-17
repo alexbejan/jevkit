@@ -56,3 +56,26 @@ to `unavailable`.
 
 Six windows is a start, not a certificate. Grow the set by recording more
 desktops and labeling `cases.json`; keep results per model version.
+
+## Jev on versus off, same task, same fresh start (2026-09-18)
+
+"Off" is the agent acting as the old setup: it reads the screen text itself
+and decides each tap, one model turn per look. Wall time includes the turn
+gaps, which is the point. "On" is the pattern: the agent plans, Jev picks
+and verifies inside one turn.
+
+| Phone: Settings root to About | Off | On |
+|---|---|---|
+| Agent turns | 3 | 1 |
+| Wall time | 65.3 s | 52.2 s |
+| Screen text into the agent's context | ~3,200 chars | 131 chars |
+| Jev calls | 0 | 4 (~6k tokens, ~$0.00025) |
+
+| Browser: X search, switch to Top, verify, read first post | Off | On |
+|---|---|---|
+| Agent turns | 2 | 1 |
+| Wall time | 42.1 s | 21.5 s |
+| Raw tool payload returned | 9 KB then 773 KB of tree | 284 chars |
+| Jev calls | 0 | 2 (~4k tokens, ~$0.00017) |
+
+Turns are the saving; device capture and OCR cost the same either way.
