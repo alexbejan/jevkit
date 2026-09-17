@@ -104,6 +104,30 @@ choice and confidence. Read the trace; `unsure` and `blocked` mean take
 over by hand. Keep the goal to one screen's worth of work and keep visual
 judgements, money, and messages out of it.
 
+## Browsing in Safari (Alex's logins live here)
+
+Safari is a native app: no browser_* tools, everything through the
+accessibility tree, which the shim and Jev already read. Recipe, proven on
+X while logged in:
+
+1. Session, then a fresh tab so the address bar takes a URL:
+   `invoke_menu` with path `["File","New Tab"]` (needs `window_id`).
+2. `jev_pick` with target "the address bar where a URL is typed", then
+   `set_value` the URL on its token and `click` it with `"action":"confirm"`.
+   Wait a few seconds for the page.
+3. Read the page from `get_window_state` with `include_screenshot:false`.
+   Use `query` to filter big trees (X and other SPAs exceed the driver's
+   node cap; a `note` about truncation means scroll or re-query). Post and
+   article text sits in `AXStaticText` values; tabs are `AXRadioButton`s.
+4. Click by `jev_pick` token and add `jev_expect` with the postcondition;
+   always pass `window_id` or the verify cannot run.
+5. Scroll with the `scroll` tool at the window centre. Never scroll or
+   click through sign-in, payment or "send" controls without asking.
+6. Close the tab you opened (`["File","Close Tab"]`) and end the session.
+
+Do not use `chrome-devtools` or `agent-browser` for Alex's accounts: they
+launch a separate empty Chrome profile.
+
 ## What Jev cannot see
 
 Only the accessibility tree reaches Jev, as text: role, label, value,
