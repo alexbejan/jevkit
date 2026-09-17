@@ -88,7 +88,7 @@ to the runner instead of narrating each click:
 
 Jev picks every move from a menu code built from the visible tree. Moves on
 the consent list (send, pay, delete, sign in, allow, call, buy, confirm,
-share) are never offered. It returns `status` (done, unsure, blocked, stuck,
+share) are never offered. It returns `status` (done, likely_done, unsure, blocked, stuck,
 max_steps, timeout), the final screen lines, and a step trace with each
 choice and confidence. Read the trace; `unsure` and `blocked` mean take
 over by hand. Keep the goal to one screen's worth of work and keep visual

@@ -79,7 +79,7 @@ def test_run_completes_when_goal_met():
 
 def test_run_stops_on_low_confidence_or_unknown_id():
     s = FakeSurface()
-    r = Runner(s, judge=_judge(Scripted([("tap_t1", 0.55, 0.0)]))).run("x")
+    r = Runner(s, judge=_judge(Scripted([("tap_t1", 0.45, 0.0)]))).run("x")   # below the low line: no act
     assert r["status"] == "unsure" and s.executed == []
     s = FakeSurface()
     r = Runner(s, judge=_judge(Scripted([("tap_t999", 0.99, 0.0)]))).run("x")
@@ -127,3 +127,9 @@ def test_clear_leader_acts_below_high_threshold():
     j = Scripted([("tap_t1", 0.61, 0.1), ("tap_t1", 0.95, 0.1), ("tap_t1", 0.9, 0.95)])
     r = Runner(s, judge=_judge(j)).run("x")
     assert r["status"] == "done" and s.executed == ["General", "About"]
+
+
+def test_likely_done_when_goal_met_leans_yes_and_no_move_is_confident():
+    s = FakeSurface()
+    r = Runner(s, judge=_judge(Scripted([("tap_t1", 0.26, 0.64)]))).run("x")
+    assert r["status"] == "likely_done" and s.executed == []

@@ -66,7 +66,7 @@ Give it a goal and a window. Code builds a menu of legal moves from the
 screen (click each element, type only caller-supplied texts, scroll), strips
 anything on the consent list (send, pay, delete, sign in, allow, call, ...),
 Jev picks one move, the driver executes it, verify runs, repeat. It stops on
-done, unsure, an auth or error screen, a consequential dialog, a stuck
+done, likely_done (goal-met leans yes but no confident move remains), unsure, an auth or error screen, a consequential dialog, a stuck
 screen, or the step and time limits, and returns a trace.
 
 ```bash

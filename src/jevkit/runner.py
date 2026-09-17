@@ -61,15 +61,25 @@ class Runner:
         return acts[: self.max_menu - 1]
 
     def _choose(self, goal, cands, menu, history):
+        # Exact lookups belong in code: which visible items does the goal name verbatim?
+        gl = goal.lower()
+        named = [c["line"] for c in cands
+                 if (c.get("text") or c.get("label") or "").strip() and len((c.get("text") or c.get("label")).strip()) > 2
+                 and re.search(r"\b" + re.escape((c.get("text") or c.get("label")).strip().lower()) + r"\b", gl)]
         state = {"goal": goal,
                  "screen": compact.lines(cands)[: config.MAX_STATE_LINES],
+                 "items_named_in_goal_now_visible": named[:10],
                  "recent_steps": history[-4:],
                  "moves": [a["line"] for a in menu]}
         criteria = {a["id"]: a["line"] for a in menu}      # `stuck` is the abstain; no `none` here
         qs = {
             "move": Choice(
                 instructions="Which single listed move is the best next step toward `goal` from the current "
-                             "`screen`? Choose the move that opens, selects or reveals what the goal names. "
+                             "`screen`? The goal may name several steps in order: take the earliest step "
+                             "that is not done yet. If the item for that step is visible on the screen, tap "
+                             "or click it; scroll only when it is not visible. "
+                             "`items_named_in_goal_now_visible` lists visible items whose text appears in the "
+                             "goal; if the next step's item is among them, choose the move that taps or clicks it. "
                              "Do not repeat a move from `recent_steps` that did not change the screen.",
                 criteria=criteria),
             "stuck": Noul(
@@ -131,9 +141,15 @@ class Runner:
             # Act on a confident pick, or on a clear leader when Jev also says a move exists.
             p1 = top[0][1] if top else 0.0
             p2 = top[1][1] if len(top) > 1 else 0.0
-            clear_leader = p1 >= config.LOW and stuck < 0.5 and p1 >= 2.5 * p2
+            clear_leader = p1 >= config.LOW and stuck < 0.5 and p1 >= 2.0 * p2
             if choice is None or stuck >= 0.8 or not (mv["confidence"] >= self.act_confidence or clear_leader):
-                status, reason = "unsure", f"choice={mv['choice']} confidence={mv['confidence']:.2f} top={top} stuck={stuck:.2f}"; trace.append(rec); break
+                # No confident move left. If Jev also leans toward the goal being met, say so:
+                # OCR noise (e.g. "¡OS Version") keeps goal_met below the strict bar on real phones.
+                if met >= config.YES:
+                    status, reason = "likely_done", f"goal_met p={met:.2f}, no confident next move"
+                else:
+                    status, reason = "unsure", f"choice={mv['choice']} confidence={mv['confidence']:.2f} top={top} stuck={stuck:.2f}"
+                trace.append(rec); break
 
             before = cands
             rec["action"] = choice["line"]
@@ -144,7 +160,9 @@ class Runner:
             self.surface.settle()
             after, meta2 = self.surface.observe()
             v = self.judge.verify(f"the screen changed as a result of: {choice['line']}", before, after, meta2, meta)
-            changed = bool(v.get("diff", {}).get("changed"))
+            d = v.get("diff", {})
+            # OCR noise flips a line or two between identical screens; ask for real movement.
+            changed = bool(d.get("title_after")) or (len(d.get("added", [])) + len(d.get("removed", [])) >= 3)
             rec["verify"] = {x: v.get(x) for x in ("landed", "p_landed", "dialog", "error", "auth", "gate", "note")}
             rec["verify"]["changed"] = changed
             history.append(f"step {step}: {choice['line']} -> " + ("changed the screen" if changed else "no visible change"))
@@ -192,9 +210,9 @@ class CuaSurface:
                                  "call": ("set_value", {"element_token": c["element_token"], "value": t})})
             acts.append({"id": f"click_{c['id']}", "kind": "click", "line": f"[click_{c['id']}] click {base}",
                          "call": ("click", {"element_token": c["element_token"]})})
-        acts.append({"id": "scroll_down", "kind": "scroll", "line": "[scroll_down] scroll down to reveal items not visible yet (use when the goal names something not on screen)",
+        acts.append({"id": "scroll_down", "kind": "scroll", "line": "[scroll_down] scroll down to see items further down the list",
                      "call": ("scroll", {"direction": "down", "amount": 5})})
-        acts.append({"id": "scroll_up", "kind": "scroll", "line": "[scroll_up] scroll the window up",
+        acts.append({"id": "scroll_up", "kind": "scroll", "line": "[scroll_up] scroll up to see items further up the list",
                      "call": ("scroll", {"direction": "up", "amount": 5})})
         return acts
 
