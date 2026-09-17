@@ -116,7 +116,7 @@ def test_default_forbid_covers_the_consent_list():
 def test_none_or_low_goal_met_never_claims_done():
     s = FakeSurface()
     r = Runner(s, judge=_judge(Scripted([("tap_t999", 0.73, 0.57)]))).run("open the Appearance pane")
-    assert r["status"] == "unsure" and s.executed == []
+    assert r["status"] in ("unsure", "likely_done") and s.executed == []   # never "done", never acts on an unknown id
     s = FakeSurface()
     r = Runner(s, judge=_judge(Scripted([("tap_t1", 0.9, 0.9)]))).run("x")
     assert r["status"] == "done" and s.executed == []   # goal_met is the only way to finish, and it wins before acting

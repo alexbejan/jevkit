@@ -5,6 +5,14 @@ description: Cheap, fast judgements from TypeSafe Jev while driving desktop apps
 
 # jev-computer
 
+**The pattern: you hold the plan and the context; Jev picks and checks.**
+Decide the next single step yourself. Take a snapshot. Ask Jev which
+element is the one you mean (`jev_pick`), act on its token, and read the
+verify verdict that comes back with the action. Never hand Jev the whole
+task: it has no memory and reads instructions literally, so it is good at
+"which of these is the Save button" and bad at "do the thing". The
+autonomous runner at the end exists for trivially bounded steps only.
+
 Follow `superset:computer` for everything about driving the desktop. This
 skill only changes what you read back and two extra tools you may call.
 A shim in front of `cua-driver` (from `~/Documents/jevkit`) adds a `jev`
@@ -75,11 +83,13 @@ cua-driver call jev_verify   '{"pid":844,"window_id":10725,"session":"<s>","expe
 `jev_verify` compares against the last snapshot the shim saw for that
 window, so call `get_window_state` first.
 
-## Let Jev drive a bounded sub-task
+## Optional: let Jev drive one trivially bounded step
 
-For a self-contained step such as "open the Appearance pane", "scroll until
-the row named X is visible" or "fill this form with these values", hand it
-to the runner instead of narrating each click:
+Only for something a single pane away with nothing to judge visually, such
+as "open the Appearance pane" or "scroll until the row named X is visible".
+Not for multi-part goals, forms with choices, or anything on a phone-sized
+screen where rows sit under bars. Prefer the pattern above; use this when
+narrating three obvious clicks is the only alternative:
 
 ```bash
 ~/Documents/jevkit/.venv/bin/jev run --pid 844 --window 10725 --session "<s>" \

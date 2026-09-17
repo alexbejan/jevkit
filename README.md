@@ -60,7 +60,16 @@ r = j.verify("the General settings page is open", before, after)
 if r["gate"] == "act": ...
 ```
 
-## Let Jev drive a bounded task (`jev run`)
+## The recommended pattern
+
+The LLM holds the plan and the context, takes the snapshot, and asks Jev
+one narrow question per step: which element, did it land, what screen is
+this. That is `pick`, `verify` and `classify`. It scored 37/38 picks on
+real windows and drove the phone Settings walk first time. `jev run` below
+inverts this (Jev holds the plan) and is kept only for trivially bounded
+steps; it needed six attempts on the phone before it landed.
+
+## Optional: let Jev drive one bounded step (`jev run`)
 
 Give it a goal and a window. Code builds a menu of legal moves from the
 screen (click each element, type only caller-supplied texts, scroll), strips
