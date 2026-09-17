@@ -113,6 +113,14 @@ def cmd_phone_verify(a):
     _out(Judge().verify(a.expect, before, _phone(a)))
 
 
+def cmd_run(a):
+    from .runner import CuaSurface, Runner
+    r = Runner(CuaSurface(a.pid, a.window, session=a.session), max_steps=a.max_steps, max_seconds=a.max_seconds).run(a.goal, texts=a.text or [])
+    if not a.full:
+        r["trace"] = [{k: v for k, v in t.items() if k in ("step", "title", "choice", "confidence", "goal_met_p", "action", "verify")} for t in r["trace"]]
+    _out(r)
+
+
 def cmd_shim(a):
     from . import shim as sh
     me = str((Path(__file__).resolve().parent.parent.parent / "shim" / "cua-driver"))
@@ -151,6 +159,10 @@ def main(argv=None):
     pv = sub.add_parser("phone-verify"); pv.add_argument("--boxes", required=True); pv.add_argument("--before", required=True)
     pv.add_argument("--expect", required=True); pv.set_defaults(fn=cmd_phone_verify)
 
+    r = sub.add_parser("run", help="Jev drives a bounded task in one window"); win(r)
+    r.add_argument("--goal", required=True); r.add_argument("--text", action="append", help="text Jev may choose to type (repeatable)")
+    r.add_argument("--max-steps", type=int, default=12); r.add_argument("--max-seconds", type=int, default=180)
+    r.add_argument("--full", action="store_true", help="full trace"); r.set_defaults(fn=cmd_run)
     sh = sub.add_parser("shim", help="where the cua-driver shim is and whether PATH resolves to it"); sh.set_defaults(fn=cmd_shim)
 
     a = p.parse_args(argv)

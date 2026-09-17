@@ -1,6 +1,7 @@
 """Read-only access to Cua Driver for snapshots. Actions never go through
 here; the agent (or the shim) keeps calling `cua-driver` itself."""
 import json
+import os
 import shutil
 import subprocess
 
@@ -19,7 +20,8 @@ def binary():
 
 
 def call(tool, timeout=30, **kw):
-    r = subprocess.run([binary(), "call", tool, json.dumps(kw)], capture_output=True, text=True, timeout=timeout)
+    env = dict(os.environ, JEVKIT_SHIM="off")      # jevkit talks to the real driver; no recursive judgements
+    r = subprocess.run([binary(), "call", tool, json.dumps(kw)], capture_output=True, text=True, timeout=timeout, env=env)
     out = (r.stdout or r.stderr).strip()
     try:
         data = json.loads(out)

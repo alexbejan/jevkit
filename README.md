@@ -60,6 +60,25 @@ r = j.verify("the General settings page is open", before, after)
 if r["gate"] == "act": ...
 ```
 
+## Let Jev drive a bounded task (`jev run`)
+
+Give it a goal and a window. Code builds a menu of legal moves from the
+screen (click each element, type only caller-supplied texts, scroll), strips
+anything on the consent list (send, pay, delete, sign in, allow, call, ...),
+Jev picks one move, the driver executes it, verify runs, repeat. It stops on
+done, unsure, an auth or error screen, a consequential dialog, a stuck
+screen, or the step and time limits, and returns a trace.
+
+```bash
+jev run --pid 7466 --window 482 --goal "open the Appearance settings pane" --max-steps 6
+# {"status": "done", "reason": "goal_met p=0.97", "steps": 2, "seconds": 9.5, ...}
+```
+
+Phone: `jev_run(goal, texts=(), max_steps=12)` inside phone-harness scripts.
+Measured 2026-09-17: Settings root to About on the test iPhone in 4 steps,
+33 s, goal_met 0.93. Jev never chooses coordinates, tokens or text; only a
+menu id.
+
 ## Offline and CI
 
 `JEVKIT_MOCK=1` answers deterministically without a key. `JEVKIT_DISABLE=1`

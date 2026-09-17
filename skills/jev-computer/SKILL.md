@@ -75,6 +75,25 @@ cua-driver call jev_verify   '{"pid":844,"window_id":10725,"session":"<s>","expe
 `jev_verify` compares against the last snapshot the shim saw for that
 window, so call `get_window_state` first.
 
+## Let Jev drive a bounded sub-task
+
+For a self-contained step such as "open the Appearance pane", "scroll until
+the row named X is visible" or "fill this form with these values", hand it
+to the runner instead of narrating each click:
+
+```bash
+~/Documents/jevkit/.venv/bin/jev run --pid 844 --window 10725 --session "<s>" \
+   --goal "open the Appearance settings pane" --max-steps 8 --text "value Jev may type"
+```
+
+Jev picks every move from a menu code built from the visible tree. Moves on
+the consent list (send, pay, delete, sign in, allow, call, buy, confirm,
+share) are never offered. It returns `status` (done, unsure, blocked, stuck,
+max_steps, timeout), the final screen lines, and a step trace with each
+choice and confidence. Read the trace; `unsure` and `blocked` mean take
+over by hand. Keep the goal to one screen's worth of work and keep visual
+judgements, money, and messages out of it.
+
 ## What Jev cannot see
 
 Only the accessibility tree reaches Jev, as text: role, label, value,
