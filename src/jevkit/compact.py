@@ -98,12 +98,13 @@ CREDENTIAL = re.compile(r"\b(password|passcode|passwort|parol[aă]|pin|one[- ]ti
                         r"card number|cvv|cvc|security code|expiry|iban)\b", re.I)
 
 
-def add_row_context(cands, index_of, nodes, parent_key, label_of, limit=2):
+def add_row_context(cands, index_of, nodes, parent_key, label_of, limit=2, max_row=8):
     """A label that appears more than once says nothing about which one is
     meant ("Buy", "Buy", "Buy"). Append the text of the row it sits in, taken
     from its siblings (or, failing that, its parent), so each reads apart:
     `Button "Buy" (in the row of 'Coldplay', 'Oct 2')`. Code does the
-    grouping; Jev only reads the result."""
+    grouping; Jev only reads the result. A parent with more than `max_row`
+    children is a page or a list, not a row, so it lends no context."""
     counts = {}
     for c in cands:
         key = (c.get("label") or "").strip().lower()
@@ -119,7 +120,10 @@ def add_row_context(cands, index_of, nodes, parent_key, label_of, limit=2):
         me = nodes.get(index_of(c)) or {}
         parent = me.get(parent_key)
         texts = []
-        for sib in children.get(parent, []):
+        siblings = children.get(parent, [])
+        if len(siblings) > max_row:
+            continue
+        for sib in siblings:
             if sib == index_of(c):
                 continue
             t = (label_of(nodes[sib]) or "").strip()
