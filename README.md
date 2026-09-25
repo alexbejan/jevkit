@@ -48,6 +48,22 @@ jev pick     --pid 844 --window 10725 --target "the Save button"
 jev classify --pid 844 --window 10725
 ```
 
+## Use from a shell (phone or simulator, agent-device)
+
+agent-device reads the app's accessibility tree; refs are pinned to their
+snapshot, so act on a pick's ref right away (see the `phone-device` skill).
+
+```bash
+jev device-snapshot --session phone-s --save /tmp/before.json
+jev device-pick     --session phone-s --target "the conversation with Joe"
+agent-device press '@e8~s637137' --settle --session phone-s
+jev device-verify   --session phone-s --expect "the thread is open" --before /tmp/before.json
+```
+
+Repeated labels carry their row (`Button "Buy" (in the row of 'Coldplay')`),
+on Cua and agent-device alike, and neither `jev run` surface ever offers typing
+into a password, code or card field.
+
 ## Use from Python (phone-harness or anything else)
 
 ```python
