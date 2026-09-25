@@ -204,7 +204,7 @@ class CuaSurface:
             if not c.get("interactive") or c["role"] in ("AXWindow",):
                 continue
             base = c["line"].split("] ", 1)[1]
-            if c["role"] in self.TYPABLE:
+            if c["role"] in self.TYPABLE and not c.get("secure"):     # never type into a credential field
                 for i, t in enumerate(texts):
                     acts.append({"id": f"type{i}_{c['id']}", "kind": "type", "line": f"[type{i}_{c['id']}] type {t!r} into {base}",
                                  "call": ("set_value", {"element_token": c["element_token"], "value": t})})
@@ -225,3 +225,44 @@ class CuaSurface:
 
     def settle(self):
         time.sleep(self.settle_s)
+
+
+# -- phone surface over agent-device ------------------------------------------
+
+class AgentDeviceSurface:
+    """One agent-device session (opened by the agent with an explicit --udid).
+    Menu: press each interactive node, fill each allowed text into each
+    non-credential field, scroll, back. Refs are pinned to their snapshot."""
+
+    def __init__(self, session, scope=None, settle_ms=400):
+        self.session, self.scope, self.settle_ms = session, scope, settle_ms
+        from . import agentdevice
+        self.ad = agentdevice
+
+    def observe(self):
+        return self.ad.snapshot(self.session, scope=self.scope)
+
+    def actions(self, cands, texts):
+        acts = []
+        for c in cands:
+            if not c.get("interactive"):
+                continue
+            base = c["line"].split("] ", 1)[1]
+            if c.get("field") and not c.get("secure"):
+                for i, t in enumerate(texts):
+                    acts.append({"id": f"fill{i}_{c['id']}", "kind": "fill", "line": f"[fill{i}_{c['id']}] type {t!r} into {base}",
+                                 "call": ["fill", c["ref"], t]})
+            acts.append({"id": f"press_{c['id']}", "kind": "press", "line": f"[press_{c['id']}] tap {base}",
+                         "call": ["press", c["ref"]]})
+        for d in ("down", "up"):
+            acts.append({"id": f"scroll_{d}", "kind": "scroll", "line": f"[scroll_{d}] scroll {d} to see more of the list",
+                         "call": ["scroll", d]})
+        acts.append({"id": "back", "kind": "back", "line": "[back] go back one screen", "call": ["back"]})
+        return acts
+
+    def execute(self, action):
+        return self.ad.call(action["call"] + ["--settle", "--settle-quiet", str(self.settle_ms)]
+                            if action["kind"] in ("press", "fill", "scroll", "back") else action["call"], self.session)
+
+    def settle(self):
+        pass        # --settle already waited for the UI to go quiet

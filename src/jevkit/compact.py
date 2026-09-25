@@ -1,8 +1,9 @@
 """Turn observations into short text Jev can judge, and diff them in code.
 
-Two sources today:
+Three sources today:
   - Cua Driver `get_window_state` elements (desktop)
-  - phone-harness `ocr()` boxes or `ui()` nodes (phone)
+  - agent-device `snapshot --json` nodes (phone, simulator, emulator)
+  - phone-harness `ocr()` boxes or `ui()` nodes (phone, fallback)
 
 Each compactor returns a list of candidates: {"id", "line", **handle}. `line`
 is what Jev sees; the handle (element_token, or x/y) stays in code. Ids are
@@ -84,10 +85,129 @@ def cua_elements(elements, include_menus=False, max_lines=None, tree_markdown=No
         out.append({"id": cid, "line": f"[{cid}] " + " ".join(parts),
                     "element_index": e.get("element_index"),
                     "element_token": e.get("element_token"), "role": role,
-                    "label": label, "value": value, "interactive": interactive})
+                    "label": label, "value": value, "interactive": interactive,
+                    "secure": role == "AXSecureTextField" or bool(CREDENTIAL.search(label))})
         if len(out) >= max_lines:
             break
-    return out
+    return add_row_context(out, lambda c: c["element_index"], by_index, "parent_index",
+                           lambda n: (n.get("label") or "").strip() or child.get(n.get("element_index"), ""))
+
+
+# Fields nobody types into on the agent's behalf: passwords, one-time codes, cards.
+CREDENTIAL = re.compile(r"\b(password|passcode|passwort|parol[aă]|pin|one[- ]time code|verification code|"
+                        r"card number|cvv|cvc|security code|expiry|iban)\b", re.I)
+
+
+def add_row_context(cands, index_of, nodes, parent_key, label_of, limit=2):
+    """A label that appears more than once says nothing about which one is
+    meant ("Buy", "Buy", "Buy"). Append the text of the row it sits in, taken
+    from its siblings (or, failing that, its parent), so each reads apart:
+    `Button "Buy" (in the row of 'Coldplay', 'Oct 2')`. Code does the
+    grouping; Jev only reads the result."""
+    counts = {}
+    for c in cands:
+        key = (c.get("label") or "").strip().lower()
+        if key:
+            counts[key] = counts.get(key, 0) + 1
+    children = {}
+    for i, n in nodes.items():
+        children.setdefault(n.get(parent_key), []).append(i)
+    for c in cands:
+        key = (c.get("label") or "").strip().lower()
+        if counts.get(key, 0) < 2:
+            continue
+        me = nodes.get(index_of(c)) or {}
+        parent = me.get(parent_key)
+        texts = []
+        for sib in children.get(parent, []):
+            if sib == index_of(c):
+                continue
+            t = (label_of(nodes[sib]) or "").strip()
+            if t and t.lower() != key and t not in texts:
+                texts.append(t[:60])
+            if len(texts) >= limit:
+                break
+        if not texts and parent in nodes:
+            t = (label_of(nodes[parent]) or "").strip()
+            if t and t.lower() != key:
+                texts.append(t[:60])
+        if texts:
+            c["row"] = texts
+            c["line"] += " (in the row of " + ", ".join(repr(t) for t in texts) + ")"
+    return cands
+
+
+# agent-device roles (XCUIElementType names on Apple, normalised names elsewhere).
+AD_PRESS = {"button", "link", "switch", "checkbox", "radio", "radiobutton", "tab", "tabbaritem", "cell",
+            "menuitem", "segmentedcontrol", "key", "slider", "stepper", "picker", "pickerwheel",
+            "toggle", "image", "icon"}
+AD_FIELD = {"textfield", "securetextfield", "searchfield", "textview", "textarea", "textbox", "edittext"}
+AD_TEXT = {"statictext", "text", "heading", "navigationbar", "alert", "sheet", "dialog"}
+
+
+def _ad_role(n):
+    return re.sub(r"[^a-z0-9]", "", (n.get("type") or n.get("role") or "").lower())
+
+
+def agent_device_nodes(snapshot, max_lines=None):
+    """agent-device `snapshot --json` data (the `data` object) -> candidates.
+    The handle is the ref, pinned to this snapshot's generation (`@e8~s479811`)
+    so a stale ref fails loudly instead of pressing whatever moved there.
+    Offscreen, disabled-looking and unlabelled container nodes are dropped."""
+    max_lines = max_lines or config.MAX_STATE_LINES
+    nodes = {n["index"]: n for n in snapshot.get("nodes", []) if "index" in n}
+    gen = snapshot.get("refsGeneration")
+    out = []
+    for n in snapshot.get("nodes", []):
+        if n.get("visibleToUser") is False or not n.get("ref"):
+            continue
+        role = _ad_role(n)
+        label = (n.get("label") or "").strip()
+        value = n.get("value")
+        value = "" if value is None else str(value).strip()
+        field = role in AD_FIELD or n.get("editable") is True
+        interactive = field or role in AD_PRESS or (n.get("hittable") is True and role not in ("other", "application", "window", "collectionview", "scrollview", "table", "group"))
+        if not interactive and not (role in AD_TEXT and (label or value)):
+            continue
+        if not (label or value or n.get("identifier")) and not field:
+            continue
+        flags = []
+        if n.get("selected") is True:
+            flags.append("selected")
+        if n.get("enabled") is False:
+            flags.append("disabled")
+        if n.get("hittable") is False and interactive:
+            flags.append("not tappable now")
+        parts = [n.get("type") or n.get("role") or "?"]
+        if label:
+            parts.append(f'"{label[:120]}"')
+        elif n.get("identifier"):
+            parts.append(f"id={n['identifier'][:80]!r}")
+        if value and value != label:
+            parts.append(f"value={value[:160]!r}")
+        if flags:
+            parts.append("(" + ", ".join(flags) + ")")
+        base = n["ref"] if n["ref"].startswith("@") else "@" + n["ref"]
+        ref = f"{base}~s{gen}" if gen is not None and "~s" not in base else base
+        cid = base[1:]
+        out.append({"id": cid, "line": f"[{cid}] " + " ".join(parts), "ref": ref, "index": n["index"],
+                    "role": role, "label": label, "value": value,
+                    "interactive": interactive and n.get("enabled") is not False,
+                    "field": field, "secure": role == "securetextfield" or bool(CREDENTIAL.search(label))})
+        if len(out) >= max_lines:
+            break
+    return add_row_context(out, lambda c: c["index"], nodes, "parentIndex",
+                           lambda n: (n.get("label") or n.get("value") or "").strip())
+
+
+def agent_device_note(snapshot):
+    """A reobserve trigger, like truncated_note for Cua."""
+    if snapshot.get("truncated"):
+        return "snapshot truncated"
+    q = (snapshot.get("snapshotQuality") or {}).get("state")
+    if q and q != "healthy":
+        return f"snapshot quality: {q}"
+    return None
 
 
 _MD_LINE = re.compile(r'^(\s*)- (?:\[(\d+)\] )?(AX\w+)(?: "([^"]*)")?(?: = "([^"]*)")?(?: \(([^)]*)\))?')

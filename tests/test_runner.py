@@ -133,3 +133,20 @@ def test_likely_done_when_goal_met_leans_yes_and_no_move_is_confident():
     s = FakeSurface()
     r = Runner(s, judge=_judge(Scripted([("tap_t1", 0.26, 0.64)]))).run("x")
     assert r["status"] == "likely_done" and s.executed == []
+
+
+def test_agent_device_surface_menu_skips_credentials_and_pins_refs():
+    from jevkit import compact
+    from jevkit.runner import AgentDeviceSurface, DEFAULT_FORBID
+    snap = {"refsGeneration": 3, "nodes": [
+        {"index": 0, "ref": "e1", "type": "TextField", "label": "iMessage"},
+        {"index": 1, "ref": "e2", "type": "SecureTextField", "label": "Passcode"},
+        {"index": 2, "ref": "e3", "type": "Button", "label": "Send"},
+    ]}
+    surf = AgentDeviceSurface.__new__(AgentDeviceSurface)
+    menu = surf.actions(compact.agent_device_nodes(snap), ["hello"])
+    fills = [a for a in menu if a["kind"] == "fill"]
+    assert [a["call"] for a in fills] == [["fill", "@e1~s3", "hello"]]
+    assert [a for a in menu if DEFAULT_FORBID.search(a["line"])]       # Send is offered by the surface...
+    kept = [a for a in menu if not DEFAULT_FORBID.search(a["line"])]
+    assert not any("Send" in a["line"] for a in kept)                    # ...and removed by the runner's filter

@@ -9,6 +9,7 @@ unavailable (the JSON says so); non-zero only for bad arguments.
   jev verify    --pid P --window W --expect "..." --before before.json
   jev ask       --state-file s.json --questions-file q.json
   jev phone-*   same three, reading phone-harness ocr()/ui() JSON from a file
+  jev device-*  snapshot/classify/pick/verify/run over an agent-device session
 """
 import argparse
 import json
@@ -113,6 +114,48 @@ def cmd_phone_verify(a):
     _out(Judge().verify(a.expect, before, _phone(a)))
 
 
+def _dsnap(a):
+    from . import agentdevice
+    return agentdevice.snapshot(a.session, scope=a.scope)
+
+
+def cmd_device_snapshot(a):
+    cands, meta = _dsnap(a)
+    if a.save:
+        with open(a.save, "w") as f:
+            json.dump({"meta": meta, "candidates": cands}, f)
+    _out({"meta": meta, "lines": compact.lines(cands), "saved": a.save})
+
+
+def cmd_device_classify(a):
+    cands, meta = _dsnap(a)
+    _out(Judge().classify(cands, meta))
+
+
+def cmd_device_pick(a):
+    cands, meta = _dsnap(a)
+    r = Judge().pick(a.target, cands, interactive_only=not a.any)
+    r["meta"] = meta
+    _out(r)
+
+
+def cmd_device_verify(a):
+    before = _load(a.before)
+    cands, meta = _dsnap(a)
+    r = Judge().verify(a.expect, before["candidates"], cands, meta, before.get("meta"))
+    r["meta"] = meta
+    _out(r)
+
+
+def cmd_device_run(a):
+    from .runner import AgentDeviceSurface, Runner
+    r = Runner(AgentDeviceSurface(a.session, scope=a.scope), max_steps=a.max_steps,
+               max_seconds=a.max_seconds).run(a.goal, texts=a.text or [])
+    if not a.full:
+        r["trace"] = [{k: v for k, v in t.items() if k in ("step", "title", "choice", "confidence", "goal_met_p", "action", "verify")} for t in r["trace"]]
+    _out(r)
+
+
 def cmd_run(a):
     from .runner import CuaSurface, Runner
     r = Runner(CuaSurface(a.pid, a.window, session=a.session), max_steps=a.max_steps, max_seconds=a.max_seconds).run(a.goal, texts=a.text or [])
@@ -158,6 +201,21 @@ def main(argv=None):
     pk.set_defaults(fn=cmd_phone_pick)
     pv = sub.add_parser("phone-verify"); pv.add_argument("--boxes", required=True); pv.add_argument("--before", required=True)
     pv.add_argument("--expect", required=True); pv.set_defaults(fn=cmd_phone_verify)
+
+    def dev(sp):
+        sp.add_argument("--session", required=True, help="agent-device session opened with an explicit --udid")
+        sp.add_argument("--scope", help="agent-device snapshot scope")
+
+    ds = sub.add_parser("device-snapshot"); dev(ds); ds.add_argument("--save"); ds.set_defaults(fn=cmd_device_snapshot)
+    dc = sub.add_parser("device-classify"); dev(dc); dc.set_defaults(fn=cmd_device_classify)
+    dk = sub.add_parser("device-pick"); dev(dk); dk.add_argument("--target", required=True)
+    dk.add_argument("--any", action="store_true", help="also consider non-interactive text"); dk.set_defaults(fn=cmd_device_pick)
+    dv = sub.add_parser("device-verify"); dev(dv); dv.add_argument("--expect", required=True)
+    dv.add_argument("--before", required=True, help="file written by `jev device-snapshot --save`"); dv.set_defaults(fn=cmd_device_verify)
+    dr = sub.add_parser("device-run", help="Jev drives a bounded step in an agent-device session"); dev(dr)
+    dr.add_argument("--goal", required=True); dr.add_argument("--text", action="append")
+    dr.add_argument("--max-steps", type=int, default=12); dr.add_argument("--max-seconds", type=int, default=180)
+    dr.add_argument("--full", action="store_true"); dr.set_defaults(fn=cmd_device_run)
 
     r = sub.add_parser("run", help="Jev drives a bounded task in one window"); win(r)
     r.add_argument("--goal", required=True); r.add_argument("--text", action="append", help="text Jev may choose to type (repeatable)")

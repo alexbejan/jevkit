@@ -1,0 +1,332 @@
+{
+ "nodes": [
+  {
+   "enabled": true,
+   "type": "Application",
+   "index": 0,
+   "hittable": false,
+   "depth": 0,
+   "label": "Settings",
+   "rect": {
+    "x": 0,
+    "y": 0,
+    "width": 402,
+    "height": 874
+   },
+   "ref": "e1"
+  },
+  {
+   "enabled": true,
+   "type": "Other",
+   "index": 1,
+   "parentIndex": 0,
+   "hittable": true,
+   "depth": 1,
+   "label": "Toolbar",
+   "rect": {
+    "x": 0,
+    "y": 0,
+    "width": 402,
+    "height": 874
+   },
+   "ref": "e2"
+  },
+  {
+   "enabled": true,
+   "type": "Other",
+   "index": 2,
+   "parentIndex": 1,
+   "hittable": true,
+   "depth": 2,
+   "label": "Settings",
+   "rect": {
+    "x": 0,
+    "y": 0,
+    "width": 402,
+    "height": 874
+   },
+   "ref": "e3"
+  },
+  {
+   "enabled": true,
+   "type": "NavigationBar",
+   "index": 3,
+   "parentIndex": 2,
+   "hittable": true,
+   "depth": 3,
+   "label": "Settings",
+   "identifier": "Settings",
+   "rect": {
+    "x": 0,
+    "y": 62,
+    "width": 402,
+    "height": 106
+   },
+   "ref": "e4"
+  },
+  {
+   "enabled": true,
+   "type": "CollectionView",
+   "index": 4,
+   "parentIndex": 2,
+   "hittable": true,
+   "depth": 4,
+   "label": "Vertical scroll bar, 2 pages",
+   "identifier": "com.apple.settings.sidebar.collectionView",
+   "rect": {
+    "x": 0,
+    "y": 116,
+    "width": 402,
+    "height": 696
+   },
+   "hiddenContentBelow": true,
+   "ref": "e5"
+  },
+  {
+   "enabled": true,
+   "type": "Cell",
+   "index": 5,
+   "parentIndex": 4,
+   "hittable": true,
+   "depth": 5,
+   "label": "Apple Account, Sign in to access your iCloud data, the App Store, Apple services, and more.",
+   "rect": {
+    "x": 16,
+    "y": 168,
+    "width": 370,
+    "height": 90.33333333333331
+   },
+   "identifier": "com.apple.settings.primaryAppleAccount",
+   "ref": "e6"
+  },
+  {
+   "rect": {
+    "x": 16,
+    "height": 52,
+    "y": 293.3333333333333,
+    "width": 370
+   },
+   "enabled": true,
+   "index": 6,
+   "parentIndex": 4,
+   "hittable": true,
+   "depth": 5,
+   "label": "Optimizing Search and Siri",
+   "type": "Cell",
+   "identifier": "com.apple.settings.spotlightIndexingProgress",
+   "ref": "e7"
+  },
+  {
+   "depth": 5,
+   "label": "General",
+   "parentIndex": 4,
+   "type": "Cell",
+   "hittable": true,
+   "enabled": true,
+   "index": 7,
+   "rect": {
+    "x": 16,
+    "height": 52,
+    "y": 380.33333333333337,
+    "width": 370
+   },
+   "identifier": "com.apple.settings.general",
+   "ref": "e8"
+  },
+  {
+   "depth": 5,
+   "label": "Accessibility",
+   "parentIndex": 4,
+   "type": "Cell",
+   "hittable": true,
+   "enabled": true,
+   "index": 8,
+   "rect": {
+    "x": 16,
+    "height": 52,
+    "y": 432.3333333333333,
+    "width": 370
+   },
+   "identifier": "com.apple.settings.accessibility",
+   "ref": "e9"
+  },
+  {
+   "depth": 5,
+   "label": "Action Button",
+   "parentIndex": 4,
+   "type": "Cell",
+   "hittable": true,
+   "enabled": true,
+   "index": 9,
+   "rect": {
+    "x": 16,
+    "height": 51.99999999999994,
+    "y": 484.3333333333333,
+    "width": 370
+   },
+   "identifier": "com.apple.settings.actionButton",
+   "ref": "e10"
+  },
+  {
+   "depth": 5,
+   "label": "Appearance",
+   "parentIndex": 4,
+   "type": "Cell",
+   "hittable": true,
+   "enabled": true,
+   "index": 10,
+   "rect": {
+    "x": 16,
+    "height": 52,
+    "y": 536.3333333333333,
+    "width": 370
+   },
+   "identifier": "com.apple.settings.appearance",
+   "ref": "e11"
+  },
+  {
+   "enabled": true,
+   "rect": {
+    "x": 16,
+    "height": 52,
+    "y": 588.3333333333333,
+    "width": 370
+   },
+   "depth": 5,
+   "type": "Cell",
+   "parentIndex": 4,
+   "index": 11,
+   "label": "Camera",
+   "hittable": true,
+   "identifier": "com.apple.settings.camera",
+   "ref": "e12"
+  },
+  {
+   "enabled": true,
+   "rect": {
+    "x": 16,
+    "height": 52,
+    "y": 640.3333333333333,
+    "width": 370
+   },
+   "depth": 5,
+   "type": "Cell",
+   "parentIndex": 4,
+   "index": 12,
+   "label": "Home Screen & App Library",
+   "hittable": true,
+   "identifier": "com.apple.settings.homeScreen",
+   "ref": "e13"
+  },
+  {
+   "enabled": true,
+   "rect": {
+    "width": 370,
+    "y": 692.3333333333334,
+    "height": 52,
+    "x": 16
+   },
+   "depth": 5,
+   "type": "Cell",
+   "parentIndex": 4,
+   "hittable": true,
+   "label": "Search",
+   "index": 13,
+   "identifier": "com.apple.settings.search",
+   "ref": "e14"
+  },
+  {
+   "enabled": true,
+   "rect": {
+    "width": 370,
+    "y": 744.3333333333334,
+    "height": 52,
+    "x": 16
+   },
+   "depth": 5,
+   "type": "Cell",
+   "parentIndex": 4,
+   "hittable": true,
+   "label": "Siri",
+   "index": 14,
+   "identifier": "com.apple.settings.siri",
+   "ref": "e15"
+  },
+  {
+   "enabled": true,
+   "rect": {
+    "x": 16,
+    "y": 796.3333333333334,
+    "width": 370,
+    "height": 15.666666666666629
+   },
+   "depth": 5,
+   "type": "Cell",
+   "parentIndex": 4,
+   "hittable": true,
+   "label": "StandBy",
+   "index": 15,
+   "identifier": "com.apple.settings.standBy",
+   "ref": "e16"
+  },
+  {
+   "hittable": true,
+   "index": 16,
+   "label": "Search",
+   "depth": 7,
+   "type": "SearchField",
+   "rect": {
+    "width": 346,
+    "y": 808,
+    "height": 28,
+    "x": 28
+   },
+   "enabled": true,
+   "parentIndex": 2,
+   "ref": "e17"
+  },
+  {
+   "hittable": true,
+   "identifier": "Dictate",
+   "label": "Dictate",
+   "index": 17,
+   "depth": 8,
+   "type": "Button",
+   "rect": {
+    "width": 17.333333333333314,
+    "y": 811,
+    "height": 22,
+    "x": 341.6666666666667
+   },
+   "enabled": true,
+   "parentIndex": 16,
+   "ref": "e18"
+  }
+ ],
+ "truncated": false,
+ "appName": "com.apple.Preferences",
+ "appBundleId": "com.apple.Preferences",
+ "visibility": {
+  "partial": true,
+  "visibleNodeCount": 18,
+  "totalNodeCount": 18,
+  "reasons": [
+   "scroll-hidden-below"
+  ]
+ },
+ "keyboard": {
+  "kind": "absent"
+ },
+ "snapshotQuality": {
+  "state": "healthy",
+  "backend": "tree",
+  "timing": {
+   "acquisitionMs": 1150.5730152130127,
+   "presentationMs": 0.8379220962524414
+  }
+ },
+ "warnings": [
+  "Simulator AX snapshot unavailable (bridge-preparation-pending); used XCTest for this capture while the bridge is still being prepared."
+ ],
+ "refsGeneration": 479811
+}
