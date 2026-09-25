@@ -1,7 +1,7 @@
 # jevkit
 
 TypeSafe **Jev** as a bounded judgement layer for computer use. Code observes
-(Cua Driver on the desktop, phone-harness on a phone), code builds the
+(Cua Driver on the desktop, agent-device on a phone), code builds the
 candidate list, Jev returns typed answers with probabilities, code decides.
 Jev never acts and never invents an element, coordinate or tool name. This is
 the same boundary Cua's own `jev-use` recipe draws, applied to native apps and
@@ -64,7 +64,7 @@ Repeated labels carry their row (`Button "Buy" (in the row of 'Coldplay')`),
 on Cua and agent-device alike, and neither `jev run` surface ever offers typing
 into a password, code or card field.
 
-## Use from Python (phone-harness or anything else)
+## Use from Python (OCR boxes or anything else)
 
 ```python
 from jevkit import Judge, compact
@@ -99,9 +99,9 @@ jev run --pid 7466 --window 482 --goal "open the Appearance settings pane" --max
 # {"status": "done", "reason": "goal_met p=0.97", "steps": 2, "seconds": 9.5, ...}
 ```
 
-Phone: `jev_run(goal, texts=(), max_steps=12)` inside phone-harness scripts.
-Measured 2026-09-17: Settings root to About on the test iPhone in 4 steps,
-33 s, goal_met 0.93. Jev never chooses coordinates, tokens or text; only a
+Phone: `jev device-run --session <s> --goal ...` over agent-device.
+(Measured 2026-09-17 with the old phone-harness backend: Settings root to
+About in 4 steps, 33 s, goal_met 0.93.) Jev never chooses coordinates, tokens or text; only a
 menu id.
 
 ## Offline and CI
