@@ -9,7 +9,7 @@ JEVKIT_TIMEOUT     seconds per HTTP operation
 import os
 from pathlib import Path
 
-MODEL = os.environ.get("JEVKIT_MODEL", "jev-1.13.0")
+MODEL = os.environ.get("JEVKIT_MODEL", "jev-1.14.0")
 TIMEOUT = float(os.environ.get("JEVKIT_TIMEOUT", "10"))
 DISABLED = os.environ.get("JEVKIT_DISABLE", "") in ("1", "true", "yes")
 MOCK = os.environ.get("JEVKIT_MOCK", "") in ("1", "true", "yes")

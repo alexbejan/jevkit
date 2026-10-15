@@ -14,6 +14,22 @@ dated result file.
 
 ## Results
 
+### 2026-10-15, jev-1.13.0 vs jev-1.14.0, same recorded cases (38 picks, 9 absent, 7 classify)
+
+| Metric | jev-1.13.0 | jev-1.14.0 |
+|---|---|---|
+| Pick accuracy | 36 / 38 (94.7%) | 37 / 38 (97.4%) |
+| Absent target returned `none` | 9 / 9 | 9 / 9 |
+| Classify kind correct | 7 / 7 | 7 / 7 |
+| Confident and wrong (`gate: act`) | 0 | 0 |
+| Mean confidence when wrong | 0.54 | 0.37 (gated `stop`) |
+| Median pick latency | 261 ms | 251 ms |
+
+1.14.0 also got the injection-chat "back button" case right (1.13.0 picked e5 at 0.43). One soft drop:
+page-level `consequential` on the Safari/X snapshot fell from 0.58 to 0.40 (advisory only; the TCC dialog's
+`dialog_kind: consequential` rose from 0.84 to 0.91). Pinned to jev-1.14.0 the same day; thresholds unchanged.
+Roll back with `JEVKIT_MODEL=jev-1.13.0` or the one-line pin in `src/jevkit/config.py`.
+
 ### 2026-09-17, jev-1.13.0, 6 windows (Finder, System Settings, Safari, Device Hub, Superset, a TCC permission dialog)
 
 | Metric | Value |
